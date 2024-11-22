@@ -1,5 +1,5 @@
 
-# Mini CRM pour Freelances
+# Mini CRM pour Freelances (WORK IN PROGRESS 5%)
 
 Un outil simple pour aider les freelances à gérer leurs clients, projets et factures.
 
