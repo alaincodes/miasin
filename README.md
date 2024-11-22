@@ -30,14 +30,14 @@ Un outil simple pour aider les freelances à gérer leurs clients, projets et fa
    cd backend
    npm install
    cp .env.example .env
-   node ace migration:run
+   node ace db:seed
    npm run dev
    ```
    API disponible sur `http://localhost:3333`.
 
 3. **Frontend (Vue.js) :**
    ```bash
-   cd ../frontend
+   cd frontend
    npm install
    npm run dev
    ```
