@@ -1,4 +1,4 @@
-import './assets/main.css'
+import './assets/style.css'
 import './axios'
 
 import { createApp } from 'vue'
