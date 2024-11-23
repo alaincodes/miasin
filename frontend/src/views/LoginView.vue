@@ -1,5 +1,8 @@
+<script setup>
+import BasicMenu from '../components/BasicMenu.vue'
+</script>
 <template>
-  <h1 class="my-4 text-center">Login</h1>
+  <BasicMenu />
   <div class="hero bg-base-200 min-h-screen">
     <div class="hero-content flex-col lg:flex-row-reverse">
       <div class="text-center lg:text-left">

@@ -28,8 +28,8 @@ import { RouterLink } from 'vue-router'
               <span class="badge">New</span>
             </a>
           </li>
-          <li><RouterLink to="/subscription">Ajouter un client</RouterLink></li>
-          <li><RouterLink to="/users">Clients</RouterLink></li>
+          <li><RouterLink to="/admin/subscription">Ajouter un client</RouterLink></li>
+          <li><RouterLink to="/admin/users">Clients</RouterLink></li>
           <li><a>Settings</a></li>
           <li><a>Logout</a></li>
         </ul>

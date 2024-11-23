@@ -15,12 +15,12 @@ const router = createRouter({
       component: () => import('../views/AdminView.vue'),
     },
     {
-      path: '/users',
+      path: '/admin/users',
       name: 'users',
       component: () => import('../views/UsersList.vue'),
     },
     {
-      path: '/subscription',
+      path: '/admin/subscription',
       name: 'subscription',
       component: () => import('../views/SubscriptionView.vue'),
     },

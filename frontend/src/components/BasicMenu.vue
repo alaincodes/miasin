@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router'
     </div>
     <div class="flex-none">
       <ul class="menu menu-horizontal px-1">
-        <RouterLink to="/login" class="btn btn-ghost text-xl">Sign in</RouterLink>
+        <RouterLink to="/admin" class="btn btn-ghost text-xl">Sign in</RouterLink>
       </ul>
     </div>
   </div>
