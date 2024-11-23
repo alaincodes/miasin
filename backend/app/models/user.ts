@@ -6,13 +6,13 @@ export default class User extends BaseModel {
   declare id: number
 
   @column()
-  declare full_name: string | null
+  declare fullname: string | null
 
   @column()
   declare name: string
 
   @column()
-  declare last_name: string
+  declare lastname: string
 
   @column()
   declare country: string

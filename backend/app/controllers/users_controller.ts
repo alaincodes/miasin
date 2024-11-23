@@ -19,7 +19,7 @@ export default class UsersController {
    * Handle form submission for the create action
    */
   async store({ request, response }: HttpContext) {
-    const userData = request.only(['fullName', 'email', 'password'])
+    const userData = request.only(['fullname', 'email', 'password'])
     const user = await User.create(userData)
     return response.status(201).json(user)
   }
