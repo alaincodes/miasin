@@ -29,7 +29,7 @@ import { RouterLink } from 'vue-router'
             </a>
           </li>
           <li><RouterLink to="/subscription">Ajouter un client</RouterLink></li>
-          <li><a>Clients</a></li>
+          <li><RouterLink to="/users">Clients</RouterLink></li>
           <li><a>Settings</a></li>
           <li><a>Logout</a></li>
         </ul>

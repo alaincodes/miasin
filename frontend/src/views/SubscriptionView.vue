@@ -4,6 +4,7 @@ import Breadcrumb from '../components/Breadcrumb.vue'
 
 <template>
   <Breadcrumb />
+  <h1 class="my-4 text-center">Ajouter un client</h1>
   <div class="grid place-content-center">
     <form action="" class="flex flex-col gap-4">
       <label class="input input-bordered flex items-center gap-2">
