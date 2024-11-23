@@ -2,7 +2,7 @@
 <script setup>
 </script>
 <template>
-  <div class="container mx-auto">
+  <div class="grid">
     <div class="stats shadow">
       <div class="stat">
         <div class="stat-figure text-primary">

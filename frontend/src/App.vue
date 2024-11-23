@@ -1,10 +1,12 @@
 <script setup>
 import { RouterView } from 'vue-router'
 import MainMenu from './components/MainMenu.vue'
+import Layout from './components/Layout.vue'
 </script>
 
 <template>
-  <MainMenu />
-
-  <RouterView />
+  <Layout>
+    <MainMenu />
+    <RouterView />
+  </Layout>
 </template>
