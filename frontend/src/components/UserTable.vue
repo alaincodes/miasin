@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
+import UserAction from '../components/users/UserAction.vue'
+import UserName from '../components/users/UserName.vue'
+import UserJob from '../components/users/UserJob.vue'
 
 const users = ref([])
 
@@ -36,7 +39,6 @@ onMounted(() => {
         </tr>
       </thead>
       <tbody>
-        <!-- row 1 -->
         <tr v-for="user in users" :key="user.id">
           <th>
             <label>
@@ -44,27 +46,14 @@ onMounted(() => {
             </label>
           </th>
           <td>
-            <div class="flex items-center gap-3">
-              <div class="avatar">
-                <div class="mask mask-squircle h-12 w-12">
-                  <img src="https://img.daisyui.com/images/profile/demo/2@94.webp"
-                    alt="Avatar Tailwind CSS Component" />
-                </div>
-              </div>
-              <div>
-                <div class="font-bold">{{ user.fullName }}</div>
-                <div class="text-sm opacity-50">{{ user.email }}</div>
-              </div>
-            </div>
+            <UserName :user="user.fullName" :email="user.email" />
           </td>
           <td>
-            Zemlak, Daniel and Leannon
-            <br />
-            <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+            <UserJob :job="user.job" :country="user.country" />
           </td>
           <td>Purple</td>
           <th>
-            <button class="btn btn-ghost btn-xs">details</button>
+            <UserAction />
           </th>
         </tr>
       </tbody>
