@@ -46,7 +46,7 @@ onMounted(() => {
             </label>
           </th>
           <td>
-            <UserName :user="user.fullName" :email="user.email" />
+            <UserName :user="user.fullname" :email="user.email" />
           </td>
           <td>
             <UserJob :job="user.job" :country="user.country" />
