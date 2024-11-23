@@ -56,32 +56,77 @@
       </div>
     </div>
   </div>
-  <div>
-    <ul>
-      <li>Clients actifs : 25</li>
-      <li>Projets actifs : 3</li>
-      <li>Factures non réglées : 2 (€1500)</li>
-      <li>Revenu : €10,000</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Échéances proches :</h3>
-    <ul>
-      <li>Projet X (02/12/2024)</li>
-      <li>Facture Y (03/12/2024)</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Activité récente :</h3>
-    <ul>
-      <li>Nouveau client : "ABC Ltd." (21/11/2024)</li>
-      <li>Projet ajouté : "Développement site web"</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Actions rapides :</h3>
-    <button>Ajouter un client</button>
-    <button>Créer un projet</button>
-    <button>Générer facture</button>
+
+  <div class="mt-6">
+    <table class="table">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th></th>
+          <th>Client</th>
+          <th>Projet</th>
+          <th>Revenu</th>
+          <th>Échéances proches</th>
+          <th>Factures non réglées</th>
+          <th>Actions rapides</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- row 1 -->
+        <tr>
+          <th>1</th>
+          <td>Cy Ganderton</td>
+          <td>Quality Control Specialist</td>
+          <td>1000$</td>
+          <td>07/07/2024</td>
+          <td>2</td>
+          <td>
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn m-1">Editer</div>
+              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <!-- row 2 -->
+        <tr class="hover">
+          <th>2</th>
+          <td>Hart Hagerty</td>
+          <td>Desktop Support Technician</td>
+          <td>20$</td>
+          <td>20/12/2024</td>
+          <td>0</td>
+          <td>
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn m-1">Editer</div>
+              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+        <!-- row 3 -->
+        <tr>
+          <th>3</th>
+          <td>Brice Swyre</td>
+          <td>Tax Accountant</td>
+          <td>434$</td>
+          <td>23/12/2024</td>
+          <td>5</td>
+          <td>
+            <div class="dropdown dropdown-end">
+              <div tabindex="0" role="button" class="btn m-1">Editer</div>
+              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                <li><a>Item 1</a></li>
+                <li><a>Item 2</a></li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
