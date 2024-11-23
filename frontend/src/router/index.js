@@ -14,6 +14,11 @@ const router = createRouter({
       name: 'users',
       component: () => import('../views/UsersList.vue'),
     },
+    {
+      path: '/subscription',
+      name: 'subscription',
+      component: () => import('../views/SubscriptionView.vue'),
+    },
   ],
 })
 

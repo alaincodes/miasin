@@ -3,7 +3,7 @@ import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-  <div class="navbar bg-base-100">
+  <div class="container navbar mx-auto bg-base-100">
     <div class="navbar-start">
       <div class="dropdown">
         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -12,36 +12,22 @@ import { RouterLink } from 'vue-router'
           </svg>
         </div>
         <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          <li><a>Item 1</a></li>
           <li>
-            <a>Parent</a>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
+            <RouterLink to="/users">Users</RouterLink>
           </li>
-          <li><a>Item 3</a></li>
         </ul>
       </div>
       <RouterLink to="/" class="btn btn-ghost text-xl">MIASIN</RouterLink>
     </div>
     <div class="navbar-center hidden lg:flex">
       <ul class="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
         <li>
-          <details>
-            <summary>Parent</summary>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </details>
+          <RouterLink to="/users">Users</RouterLink>
         </li>
-        <li><a>Item 3</a></li>
       </ul>
     </div>
     <div class="navbar-end">
-      <a class="btn">Button</a>
+      <RouterLink to="/subscription" class="btn btn-secondary">Sign up</RouterLink>
     </div>
   </div>
 </template>
