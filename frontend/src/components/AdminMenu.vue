@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router'
 <template>
   <div class="navbar bg-base-100">
     <div class="flex-1">
-      <RouterLink to="/" class="btn btn-ghost text-xl">MIASIN</RouterLink>
+      <RouterLink to="/admin" class="btn btn-ghost text-xl">MIASIN</RouterLink>
     </div>
     <div class="flex-none gap-2">
       <div class="form-control">
