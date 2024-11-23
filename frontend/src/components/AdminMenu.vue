@@ -31,7 +31,7 @@ import { RouterLink } from 'vue-router'
           <li><RouterLink to="/admin/subscription">Ajouter un client</RouterLink></li>
           <li><RouterLink to="/admin/users">Clients</RouterLink></li>
           <li><a>Settings</a></li>
-          <li><a>Logout</a></li>
+          <li><RouterLink to="/">Logout</RouterLink></li>
         </ul>
       </div>
     </div>
