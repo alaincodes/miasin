@@ -5,11 +5,12 @@ Un outil simple pour aider les freelances à gérer leurs clients, projets et fa
 
 ## 🚀 Stack utilisée
 - **Frontend** : Vue.js (tableau de bord interactif).
-- **Backend** : AdonisJS (API RESTful et génération de PDF).
+- **Backend** : AdonisJS (API RESTful).
+- **Full** : InertiaJS.
 
 ---
 
-## 🛠️ Fonctionnalités
+## 🛠️ Fonctionnalités (FICTIF ET A VOIR =))))))
 - **Tableau de bord** : Vue centralisée pour les clients, projets et factures.
 - **Calendrier** : Suivi des échéances et délais.
 - **Calcul automatique** : Revenus et taxes basés sur les projets terminés.
@@ -29,6 +30,7 @@ Un outil simple pour aider les freelances à gérer leurs clients, projets et fa
    ```bash
    cd backend
    npm install
+   node ace generate:key
    cp .env.example .env
    node ace db:seed
    npm run dev
