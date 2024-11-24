@@ -96,6 +96,8 @@
 
       <Link href="/about">about</Link>
 
+      <button class="btn btn-primary">Button</button>
+
       <article class="relative p-6 shadow-sm hover:shadow border border-sand-7 hover:border-sand-8 rounded-2xl transition ease-in-out duration-700 group flex flex-row gap-4">
         <div class="shrink-0 w-10 h-10 bg-primary/20 rounded-md flex justify-center items-center">
           <svg class="h-6 w-6 fill-primary" viewBox="0 0 256 256">

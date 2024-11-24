@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui"
+
 export default {
   content: [
     "./inertia/**/*.vue",
@@ -7,6 +9,11 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    daisyui,
+  ],
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  }
 }
 
