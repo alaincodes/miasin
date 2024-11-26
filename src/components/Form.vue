@@ -4,7 +4,10 @@ import { useFormStore } from '@/stores/formStore'
 const formStore = useFormStore()
 
 const submitForm = () => {
-  console.log(formStore.formData)
+  formStore.updateForm({
+    name: formStore.formData.name,
+    amount: formStore.formData.amount,
+  })
 }
 </script>
 

@@ -3,10 +3,8 @@ import { onMounted, ref } from 'vue'
 import { useFormStore } from '@/stores/formStore'
 import Chart from 'chart.js/auto'
 
-// Récupérer le store
 const formStore = useFormStore()
 
-// Déclarer une référence réactive pour les données
 const data = ref([
   { amount: 500, category: "Food" },
   { amount: 1200, category: "Travel" },
@@ -15,18 +13,16 @@ const data = ref([
   { amount: 300, category: "Entertainment" },
   { amount: 450, category: "Books" },
   { amount: 2000, category: "Education" },
+  { amount: 1000, category: "Random" },
 ])
 
-// Mettre à jour les données du tableau avec celles du store
 const updateChartData = () => {
-  // Ajoutez les données du formulaire dans le tableau `data`
   if (formStore.formData.name && formStore.formData.amount) {
     data.value.push({ amount: parseFloat(formStore.formData.amount), category: formStore.formData.name })
   }
 }
 
 onMounted(() => {
-  // Mettez à jour les données du graphique
   updateChartData()
 
   const ctx = document.getElementById('expenses').getContext('2d')
