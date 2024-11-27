@@ -2,12 +2,12 @@ import { DateTime } from 'luxon'
 import { BaseModel, belongsTo, column } from '@adonisjs/lucid/orm'
 import type { BelongsTo } from '@adonisjs/lucid/types/relations'
 
-export default class User extends BaseModel {
+export default class User extends compose(BaseModel, AuthFinder) {
   @column({ isPrimary: true })
   declare id: number
 
-  @column()
-  declare fullname: string | null
+  @column.dateTime({ autoCreate: true })
+  declare createdAt: DateTime
 
   @column()
   declare name: string
@@ -15,7 +15,7 @@ export default class User extends BaseModel {
   @column()
   declare email: string
 
-  @column()
+  @column({ serializeAs: null })
   declare password: string
 
   @column.dateTime({ autoCreate: true })
