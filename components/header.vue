@@ -21,6 +21,7 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
           <li><NuxtLink to="/">Home</NuxtLink></li>
           <li><NuxtLink to="/about">About</NuxtLink></li>
+          <li><NuxtLink to="/blog/">Blog</NuxtLink></li>
         </ul>
       </div>
     </div>

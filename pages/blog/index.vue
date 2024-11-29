@@ -1,5 +1,5 @@
 <script setup>
-  const { data: posts } = useFetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
+  const { data: posts } = await useFetch('https://jsonplaceholder.typicode.com/posts?_limit=10')
 </script>
 
 <template>
