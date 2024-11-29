@@ -1,7 +1,7 @@
 <script setup>
 useHead({
   htmlAttrs: {
-    'data-theme': 'dim',
+    'data-theme': 'nord',
   },
 })
 </script>
@@ -9,10 +9,8 @@ useHead({
   <div>
     <NuxtRouteAnnouncer />
 
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
-
-    <button class="btn btn-primary">Button</button>
+    <NuxtLayout>
+      <NuxtPage/>
+    </NuxtLayout>
   </div>
 </template>
