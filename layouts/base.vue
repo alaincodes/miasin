@@ -1,7 +1,0 @@
-<template>
-  <div class="min-h-dvh">
-    <main>
-      <slot />
-    </main>
-  </div>
-</template>
