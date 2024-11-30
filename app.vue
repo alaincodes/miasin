@@ -1,6 +1,6 @@
 <script setup>
 // import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
+// import Footer from '@/components/Footer.vue'
 
 const config = useAppConfig()
 
@@ -24,6 +24,6 @@ useHead({
       <NuxtPage/>
     </NuxtLayout>
 
-    <Footer />
+    <!-- <Footer /> -->
   </div>
 </template>
