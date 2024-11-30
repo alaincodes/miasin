@@ -16,7 +16,6 @@ useHead({
 </script>
 <template>
   <div>
-    <NuxtLoadingIndicator />
     <NuxtRouteAnnouncer />
 
     <Header />

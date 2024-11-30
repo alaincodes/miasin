@@ -1,6 +1,3 @@
-<script setup>
-// console.log(import.meta.url)
-</script>
 <template>
   <div class="navbar bg-base-100">
     <div class="navbar-start">
