@@ -1,47 +1,29 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
 
   <main>
-    <TheWelcome />
+    <article class="prose">
+      <h2>Garlic bread with cheese: What the science tells us</h2>
+      <p>
+        For years parents have espoused the health benefits of eating garlic bread with cheese to their
+        children, with the food earning such an iconic status in our culture that kids will often dress
+        up as warm, cheesy loaf for Halloween.
+      </p>
+      <p>
+        But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases
+        springing up around the country.
+      </p>
+    </article>
+
+    <button class="btn btn-info">Info</button>
+    <button class="btn btn-success">Success</button>
+    <button class="btn btn-warning">Warning</button>
+    <button class="btn btn-error">Error</button>
   </main>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
