@@ -33,12 +33,14 @@
         <tr>
           <th>1</th>
           <td>
-            <div class="avatar online placeholder">
-              <div class="bg-neutral text-neutral-content w-8 rounded-full">
-                <span class="text-s">JC</span>
+            <div class="flex items-center gap-3">
+              <div class="avatar online placeholder">
+                <div class="bg-neutral text-neutral-content w-10 rounded-full">
+                  <span class="text-s">JC</span>
+                </div>
               </div>
+              <span>Jean Colette</span>
             </div>
-            Jean Colette
           </td>
           <td>Vodka</td>
           <td>
@@ -61,12 +63,14 @@
         <tr>
           <th>2</th>
           <td>
-            <div class="avatar placeholder">
-              <div class="bg-neutral text-neutral-content w-8 rounded-full">
-                <span class="text-s">CG</span>
+            <div class="flex items-center gap-3">
+              <div class="avatar offline placeholder">
+                <div class="bg-neutral text-neutral-content w-10 rounded-full">
+                  <span class="text-s">CG</span>
+                </div>
               </div>
+              <span>Cy Ganderton</span>
             </div>
-            Cy Ganderton
           </td>
           <td>Saucisse sèche</td>
           <td>
@@ -89,12 +93,14 @@
         <tr>
           <th>3</th>
           <td>
-            <div class="avatar online placeholder">
-              <div class="bg-neutral text-neutral-content w-8 rounded-full">
-                <span class="text-s">HH</span>
+            <div class="flex items-center gap-3">
+              <div class="avatar online placeholder">
+                <div class="bg-neutral text-neutral-content w-10 rounded-full">
+                  <span class="text-s">HH</span>
+                </div>
               </div>
+              <span>Hart Hagerty</span>
             </div>
-            Hart Hagerty
           </td>
           <td>Redbull</td>
           <td>
@@ -117,12 +123,14 @@
         <tr>
           <th>4</th>
           <td>
-            <div class="avatar placeholder">
-              <div class="bg-neutral text-neutral-content w-8 rounded-full">
-                <span class="text-s">BS</span>
+            <div class="flex items-center gap-3">
+              <div class="avatar offline placeholder">
+                <div class="bg-neutral text-neutral-content w-10 rounded-full">
+                  <span class="text-s">BS</span>
+                </div>
               </div>
+              <span>Brice Swyre</span>
             </div>
-            Brice Swyre
           </td>
           <td>Baguette</td>
           <td>
