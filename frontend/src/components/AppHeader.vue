@@ -4,7 +4,7 @@
       <router-link to="/" class="btn btn-ghost text-xl">MIASIN</router-link>
     </div>
     <div class="flex-none flex gap-4">
-      <router-link to="/user-post" class="btn btn-primary">Suggest something !</router-link>
+      <router-link to="/user-post" class="btn btn-primary">+</router-link>
       <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
           <div class="indicator">
