@@ -61,5 +61,5 @@
         </div>
       </button>
     </div>
-    </div>
+  </div>
 </template>
