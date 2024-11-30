@@ -1,7 +1,4 @@
 <script setup>
-// import Header from '@/components/Header.vue'
-// import Footer from '@/components/Footer.vue'
-
 const config = useAppConfig()
 
 useSeoMeta({
@@ -18,12 +15,12 @@ useHead({
   <div>
     <NuxtRouteAnnouncer />
 
-    <!-- <Header /> -->
+    <AppHeader />
 
     <NuxtLayout>
       <NuxtPage/>
     </NuxtLayout>
 
-    <!-- <Footer /> -->
+    <AppFooter />
   </div>
 </template>
