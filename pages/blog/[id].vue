@@ -3,7 +3,9 @@
     <h1>{{ post.title }}</h1>
     <p>{{ post.body }}</p>
   </div>
-  <div v-else>chargement.................</div>
+  <div v-else>
+    <span class="loading loading-infinity loading-lg"></span>
+  </div>
 </template>
 
 <script setup>
