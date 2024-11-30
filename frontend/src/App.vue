@@ -1,13 +1,13 @@
 <script setup>
 import AppHeader from '@/components/AppHeader.vue'
-import ItemsTable from '@/components/ItemsTable.vue'
-import PostItem from '@/components/forms/PostItem.vue'
+import AppBreadcrumb from '@/components/AppBreadcrumb.vue';
 </script>
 
 <template>
-  <main>
+  <main class="container mx-auto">
     <AppHeader />
-    <PostItem />
-    <ItemsTable />
+    <AppBreadcrumb />
   </main>
+
+  <router-view />
 </template>

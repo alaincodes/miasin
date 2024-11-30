@@ -1,6 +1,24 @@
 <template>
+  <div class="flex justify-end my-6">
+    <div class="join">
+      <div>
+        <div>
+          <input class="input input-bordered join-item" placeholder="Search" />
+        </div>
+      </div>
+      <select class="select select-bordered join-item">
+        <option disabled selected>Filter</option>
+        <option>Meat</option>
+        <option>Drinks</option>
+        <option>Delicatessen</option>
+      </select>
+      <div class="indicator">
+        <button class="btn join-item">Search</button>
+      </div>
+    </div>
+  </div>
   <div class="overflow-x-auto">
-    <table class="table table-l">
+    <table class="table table-l table-zebra">
       <thead>
         <tr>
           <th></th>
@@ -20,7 +38,7 @@
           <td>12/16/2024</td>
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
-              <div tabindex="0" role="button" class="btn m-1">Decisions</div>
+              <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
               <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
@@ -37,7 +55,7 @@
           <td>12/5/2024</td>
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
-              <div tabindex="0" role="button" class="btn m-1">Decisions</div>
+              <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
               <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
@@ -54,7 +72,7 @@
           <td>8/15/2024</td>
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
-              <div tabindex="0" role="button" class="btn m-1">Decisions</div>
+              <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
               <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
