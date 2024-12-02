@@ -45,14 +45,19 @@
           <td>Vodka</td>
           <td>
             <div class="chat chat-start w-52 max-w-full">
-              <div class="chat-bubble chat-bubble-primary">What kind of nonsense is this, just buy it</div>
+              <div class="chat-bubble chat-bubble-primary">
+                What kind of nonsense is this, just buy it
+              </div>
             </div>
           </td>
           <td>12/16/2024</td>
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
               <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
-              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
                 <li><a>Thinking...</a></li>
@@ -82,7 +87,10 @@
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
               <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
-              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
                 <li><a>Thinking...</a></li>
@@ -112,7 +120,10 @@
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
               <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
-              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
                 <li><a>Thinking...</a></li>
@@ -142,7 +153,10 @@
           <td>
             <div class="dropdown dropdown-bottom dropdown-end">
               <div tabindex="0" role="button" class="btn btn-info m-1">Decisions</div>
-              <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+              <ul
+                tabindex="0"
+                class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+              >
                 <li><a>Accept</a></li>
                 <li><a>Reject</a></li>
                 <li><a>Thinking...</a></li>
