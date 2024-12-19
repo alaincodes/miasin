@@ -4,14 +4,37 @@ import VerdictChart from '@/VerdictChart.vue'
 
 const guiltyCount = ref(1)
 const innocentCount = ref(1)
+const verdictColor = ref("")
+// const isGuiltySelected = ref(false)
+// const isInnocentSelected = ref(false)
+
+// const toggleGuilty = () => {
+//   if (isGuiltySelected.value) {
+//     guiltyCount.value -= 1
+//   } else {
+//     guiltyCount.value += 1
+//   }
+//   isGuiltySelected.value = !isGuiltySelected.value
+// }
+
+// const toggleInnocent = () => {
+//   if (isInnocentSelected.value) {
+//     innocentCount.value -= 1
+//   } else {
+//     innocentCount.value += 1
+//   }
+//   isInnocentSelected.value = !isInnocentSelected.value
+// }
 
 const finalJudgement = computed(() => {
   if (guiltyCount.value > innocentCount.value) {
+    verdictColor.value = "text-red-500"
+
     return "GUILTY !!!"
-  } else if (guiltyCount.value < innocentCount.value) {
-    return "INNOCENT !!!"
   } else {
-    return "Deciding..."
+    verdictColor.value = "text-green-500"
+
+    return "INNOCENT !!!"
   }
 })
 </script>
@@ -34,18 +57,15 @@ const finalJudgement = computed(() => {
           </div>
           <button @click="guiltyCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-red-800 rounded-xl text-white duration-300 hover:bg-red-600 hover:text-red-100">
             <span>Guilty</span>
-            <!-- <span class="text-2xl">{{ guiltyCount }}</span> -->
           </button>
           <button @click="innocentCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-green-800 rounded-xl text-white duration-300 hover:bg-green-600 hover:text-green-100">
             <span>Innocent</span>
-            <!-- <span class="text-2xl">{{ innocentCount }}</span> -->
           </button>
         </div>
 
         <div class="flex flex-col items-center gap-4 w-full">
-          <p class="text-xl font-bold">Final Jugement:</p>
+          <p class="text-xl font-bold">Final Jugement: <span :class="verdictColor">{{ finalJudgement }}</span></p>
           <VerdictChart :guiltyCount="guiltyCount" :innocentCount="innocentCount" />
-          <p class="text-5xl font-bold uppercase underline underline-offset-8">{{ finalJudgement }}</p>
         </div>
       </div>
     </div>
