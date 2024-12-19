@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms'
+
 export default {
   content: [
     "./inertia/**/*.ts",
@@ -7,6 +10,6 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [typography, forms],
 }
 

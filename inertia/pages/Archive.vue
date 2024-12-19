@@ -1,13 +1,11 @@
+<script setup>
+  import { Head } from '@inertiajs/vue3'
+</script>
+
 <template>
+  <Head title="Archives" />
+
   <div class="grid grid-cols-1 gap-6">
-    <div>
-      <h2 class="mb-6 text-2xl font-bold">Incoming Cases:</h2>
-      <ul>
-        <li><span>12/12/24</span> Case 1 (User 1)</li>
-        <li><span>12/12/24</span> Case 2 (User 2)</li>
-        <li><span>12/12/24</span> Case 3 (User 3)</li>
-      </ul>
-    </div>
     <div>
       <h2 class="mb-6 text-2xl font-bold">History:</h2>
       <ul class="flex flex-col gap-4">

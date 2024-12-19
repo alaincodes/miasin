@@ -14,9 +14,9 @@
     </a>
     <nav>
       <ul class="flex gap-4">
-        <li><Link href="#">Upcoming</Link></li>
+        <li><Link href="/add_case">New Case</Link></li>
         <li><Link href="#">Statistics</Link></li>
-        <li><Link href="/history">History</Link></li>
+        <li><Link href="/archive">Archived</Link></li>
       </ul>
     </nav>
   </header>
