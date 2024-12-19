@@ -8,7 +8,8 @@
 */
 
 import router from '@adonisjs/core/services/router'
-router.on('/').renderInertia('home')
+router.on('/').renderInertia('Home')
 router.on('/archive').renderInertia('Archive')
-router.on('/add_case').renderInertia('addCase')
+router.on('/new_case').renderInertia('cases/new')
+router.on('/stats').renderInertia('Statistics')
 

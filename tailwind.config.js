@@ -4,6 +4,7 @@ import forms from '@tailwindcss/forms'
 
 export default {
   content: [
+    "./resources/**/*.edge",
     "./inertia/**/*.ts",
     "./inertia/**/*.{js,ts,jsx,tsx,vue}",
   ],

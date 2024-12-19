@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <header class="fixed top-0 w-full flex items-center justify-between p-4 bg-red-800 text-white">
+  <header class="fixed top-0 w-full flex items-center justify-between p-4 bg-slate-500 text-white">
     <a href="/" class="grid grid-flow-col items-center gap-2">
       <div class="w-7">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
@@ -14,7 +14,7 @@
     </a>
     <nav>
       <ul class="flex gap-4">
-        <li><Link href="/new_case">New Case</Link></li>
+        <li><Link href="/add_case">New Case</Link></li>
         <li><Link href="/stats">Statistics</Link></li>
         <li><Link href="/archive">Archived</Link></li>
       </ul>
