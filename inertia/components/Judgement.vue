@@ -2,8 +2,8 @@
 import { ref, computed, onMounted } from 'vue'
 import VerdictChart from '@/VerdictChart.vue'
 
-const guiltyCount = ref(0)
-const innocentCount = ref(0)
+const guiltyCount = ref(1)
+const innocentCount = ref(1)
 
 const finalJudgement = computed(() => {
   if (guiltyCount.value > innocentCount.value) {

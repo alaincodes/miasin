@@ -7,11 +7,11 @@ const chartRef = ref(null)
 const props = defineProps({
   guiltyCount: {
     type: Number,
-    required: true
+    required: true,
   },
   innocentCount: {
     type: Number,
-    required: true
+    required: true,
   }
 })
 
