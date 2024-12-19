@@ -44,7 +44,7 @@ const finalJudgement = computed(() => {
 
         <div class="flex flex-col items-center gap-4 w-full">
           <p class="text-xl font-bold">Final Jugement:</p>
-          <VerdictChart />
+          <VerdictChart :guiltyCount="guiltyCount" :innocentCount="innocentCount" />
           <p class="text-5xl font-bold uppercase underline underline-offset-8">{{ finalJudgement }}</p>
         </div>
       </div>
