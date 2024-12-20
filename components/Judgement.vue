@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed } from 'vue'
 
 const guiltyCount = ref(1)
 const innocentCount = ref(1)
@@ -43,16 +43,16 @@ const finalJudgement = computed(() => {
     <div class="flex flex-col items-center gap-9">
       <h1 class="text-3xl font-bold text-cyan-900">Case: Ending in 1:00 </h1>
       <div class="grid gap-6">
-        <h2 class="text-2xl font-bold text-red-800 md:text-4xl">&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eum, excepturi earum minima placeat quam accusantium blanditiis optio odio ut ?&rdquo;</h2>
+        <h2 class="text-2xl font-bold text-red-800 md:text-4xl">Un pigeon vole une frite sur une table de café en terrasse. Est-il coupable de "vol à l’étalage" ?</h2>
       </div>
 
       <div class="grid grid-cols-1 place-items-start justify-items-center gap-6 w-full md:grid-cols-2 md:gap-12">
         <div class="grid grid-cols-2 gap-4 w-full">
           <div class="col-span-full">
-            <p class="md:text-2xl">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
+            <p class="italic font-medium md:text-sm">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
           </div>
           <div class="size-24 col-span-full m-auto md:size-48">
-            <img src="../assets/images/themis.webp" class="w-full h-full" alt="picture of a judge">
+            <img src="~/assets/images/themis.webp" class="w-full h-full" alt="picture of a judge">
           </div>
           <button @click="guiltyCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-red-800 rounded-xl text-white duration-300 hover:bg-red-600 hover:text-red-100">
             <span>Guilty</span>
@@ -63,7 +63,10 @@ const finalJudgement = computed(() => {
         </div>
 
         <div class="flex flex-col items-center gap-4 w-full">
-          <p class="text-xl font-bold">Final Jugement: <span :class="verdictColor">{{ finalJudgement }}</span></p>
+          <div>
+            <img src="~/assets/images/icons/gavel.svg" class="size-8 mx-auto mb-2 animate-hammerSwing" alt="gavel">
+            <p class="text-xl font-bold">Final Jugement: <span :class="verdictColor">{{ finalJudgement }}</span></p>
+          </div>
           <VerdictChart :guiltyCount="guiltyCount" :innocentCount="innocentCount" />
         </div>
       </div>
