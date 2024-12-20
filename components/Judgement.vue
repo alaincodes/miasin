@@ -43,13 +43,13 @@ const finalJudgement = computed(() => {
     <div class="flex flex-col items-center gap-9">
       <h1 class="text-3xl font-bold text-cyan-900">Case: Ending in 1:00 </h1>
       <div class="grid gap-6">
-        <h2 class="text-4xl font-bold text-red-800">&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eum, excepturi earum minima placeat quam accusantium blanditiis optio odio ut ?&rdquo;</h2>
+        <h2 class="text-2xl font-bold text-red-800 md:text-4xl">&ldquo;Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, eum, excepturi earum minima placeat quam accusantium blanditiis optio odio ut ?&rdquo;</h2>
       </div>
 
       <div class="grid grid-cols-1 place-items-start justify-items-center gap-6 w-full md:grid-cols-2 md:gap-12">
         <div class="grid grid-cols-2 gap-4 w-full">
           <div class="col-span-full">
-            <p class="text-2xl">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
+            <p class="md:text-2xl">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
           </div>
           <div class="size-24 col-span-full m-auto md:size-48">
             <img src="../assets/images/themis.webp" class="w-full h-full" alt="picture of a judge">
