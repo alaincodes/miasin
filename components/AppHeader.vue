@@ -12,7 +12,7 @@
         <ul class="flex gap-4">
           <li><NuxtLink to="/cases/new">New Case</NuxtLink></li>
           <li><NuxtLink to="/statistics">Statistics</NuxtLink></li>
-          <li><NuxtLink to="/history">History</NuxtLink></li>
+          <li><NuxtLink to="/cases">Cases</NuxtLink></li>
         </ul>
       </nav>
     </div>

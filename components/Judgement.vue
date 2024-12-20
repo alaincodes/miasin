@@ -71,7 +71,5 @@ const finalJudgement = computed(() => {
         </div>
       </div>
     </div>
-
-    <button class="grid grid-flow-col place-items-center self-end justify-self-end gap-2 py-2 px-4 border border-slate-600 rounded-xl text-slate-600 duration-300 hover:bg-slate-700 hover:text-white">Next case...</button>
   </div>
 </template>
