@@ -6,18 +6,18 @@
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
           <label>
             <span class="text-gray-700">Identity of the Offender/Criminal</span>
-            <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Romanus Ferjanus">
+            <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Alanus Tranus">
           </label>
 
           <label>
             <span class="text-gray-700">What type of crime is it?</span>
             <select class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0">
               <option value="" disabled selected>Select crime</option>
-              <option>Racism</option>
-              <option>Homophobia</option>
-              <option>Hate speech</option>
-              <option>Sexual Assault</option>
-              <option>Browsing (X, Reddit, PornHub etc...)</option>
+              <option>Crime 1</option>
+              <option>Crime 2</option>
+              <option>Crime 3</option>
+              <option>Crime 4</option>
+              <option>Crime 5</option>
               <option>Other</option>
             </select>
           </label>
@@ -34,7 +34,7 @@
 
           <label class="col-span-full">
             <span class="text-gray-700">Crime title</span>
-            <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Racism... Hate speech... etc">
+            <input type="text" class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0" placeholder="Crime type...">
           </label>
 
           <label class="col-span-full">
