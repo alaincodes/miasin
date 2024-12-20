@@ -1,13 +1,19 @@
-const {nextui} = require('@nextui-org/theme');
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+import typography from '@tailwindcss/typography'
+import forms from '@tailwindcss/forms'
+
+export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
   ],
-  theme: {},
-  darkMode: "class",
- plugins: [require("tailwindcss-animate"),nextui()],
-};
+  theme: {
+    extend: {},
+  },
+  plugins: [typography, forms],
+}
+
