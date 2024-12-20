@@ -1,3 +1,3 @@
 <template>
-  <HistoryChart />
+  <Cases />
 </template>

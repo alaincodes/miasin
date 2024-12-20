@@ -1,5 +1,6 @@
 <template>
-  <div class="[--header-height:4rem] grid place-content-center min-h-dvh pt-[--header-height]">
+  <div class="grid grid-cols-1 gap-12 items-start p-12 md:grid-cols-2">
     <Judgement />
+    <Cases />
   </div>
 </template>
