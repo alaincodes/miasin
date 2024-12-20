@@ -63,7 +63,7 @@ const staticContent = [
     <h2 class="text-center text-3xl font-bold text-cyan-900">Cases:</h2>
     <ul class="flex flex-col divide-y divide-slate-900">
       <li v-for="(item, index) in staticContent" :key="index">
-        <div class="prose p-4 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20">
+        <div class="prose max-w-full w-full p-4 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20">
           <p><strong>Anonymous</strong> filed a complaint on <strong>{{ item.date }}</strong> at <strong>{{ item.time }}</strong></p>
           <p><strong>Case:</strong> {{ item.message }}</p>
           <p>Verdict: <strong>{{ item.user }}</strong> is
