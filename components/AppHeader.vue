@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed top-0 w-full p-4 bg-red-800 text-white">
+  <header class="z-50 fixed top-0 w-full p-4 bg-red-800 text-white">
     <div class="container flex items-center justify-between mx-auto">
       <a href="/" class="grid grid-flow-col items-center gap-2">
         <div class="w-7">
