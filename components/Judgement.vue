@@ -52,10 +52,6 @@ const voteInnocent = () => {
   }
 }
 
-const isVoted = computed(() => {
-  return userVote.value !== ''
-})
-
 const isGuiltyVoted = computed(() => userVote.value === 'guilty')
 
 const isInnocentVoted = computed(() => userVote.value === 'innocent')
