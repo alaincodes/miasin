@@ -1,5 +1,8 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted } from 'vue'
+import { useFakeContentStore } from '../stores/useFakeContentStore.js'
+
+const fakeContentStore = useFakeContentStore()
 
 const guiltyCount = ref(1)
 const innocentCount = ref(1)
@@ -36,13 +39,17 @@ const finalJudgement = computed(() => {
     return "INNOCENT !!!"
   }
 })
+
+onMounted(() => {
+  fakeContentStore.selectFirstCaseIfNeeded()
+})
 </script>
 
 <template>
-  <div class="grid grid-cols-1 justify-items-center items-center gap-8 mx-auto md:self-center">
+  <div v-if="fakeContentStore.selectedCase" class="grid grid-cols-1 justify-items-center items-center gap-8 mx-auto md:self-center">
     <div class="flex flex-col items-center gap-9">
       <div class="grid gap-6">
-        <h2 class="text-2xl font-bold text-red-800 md:text-4xl">Un pigeon vole une frite sur une table de café en terrasse. Est-il coupable de "vol à l’étalage" ?</h2>
+        <h2 class="text-2xl font-bold text-red-800 md:text-4xl">{{ fakeContentStore.selectedCase.message }}</h2>
       </div>
 
       <div class="grid grid-cols-1 place-items-start justify-items-center gap-6 w-full xl:grid-cols-2 xl:gap-12">
@@ -51,7 +58,7 @@ const finalJudgement = computed(() => {
             <p class="italic font-light md:text-xs">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
           </div>
           <div class="size-24 col-span-full m-auto md:size-48">
-            <img src="~/assets/images/themis.webp" class="w-full h-full" alt="picture of a judge">
+            <img src="~/assets/images/themis.webp" class="w-full h-full" alt="picture of a judge" />
           </div>
           <button @click="guiltyCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-red-800 rounded-xl text-white duration-300 hover:bg-red-600 hover:text-red-100">
             <span>Guilty</span>
@@ -70,5 +77,9 @@ const finalJudgement = computed(() => {
         </div>
       </div>
     </div>
+  </div>
+
+  <div v-else>
+    <p class="text-center">Charging....</p>
   </div>
 </template>

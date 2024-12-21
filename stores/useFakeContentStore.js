@@ -60,6 +60,7 @@ export const useFakeContentStore = defineStore('fakeContent', {
         judgement: 'Guilty',
       },
     ],
+    selectedCase: null,
   }),
 
   getters: {
@@ -70,5 +71,13 @@ export const useFakeContentStore = defineStore('fakeContent', {
     addCase(newCase) {
       this.cases.push(newCase)
     },
+    selectCase(caseItem) {
+      this.selectedCase = caseItem
+    },
+    selectFirstCaseIfNeeded() {
+      if (!this.selectedCase && this.cases.length > 0) {
+        this.selectedCase = this.cases[0];
+      }
+    }
   },
 })

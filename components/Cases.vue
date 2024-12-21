@@ -8,7 +8,7 @@ const fakeContentStore = useFakeContentStore()
   <div class="grid grid-cols-1 gap-9 content-start md:h-full md:overflow-y-auto">
     <h2 class="text-center text-3xl font-bold text-cyan-900">Cases:</h2>
     <ul class="flex flex-col divide-y divide-slate-900">
-      <li v-for="(item, index) in fakeContentStore.cases" :key="index">
+      <li v-for="(item, index) in fakeContentStore.cases" :key="index" @click="fakeContentStore.selectCase(item)">
         <div
           class="prose max-w-full w-full py-4 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20 md:p-6"
         >
