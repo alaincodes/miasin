@@ -1,8 +1,10 @@
 <script setup>
-import { computed, onMounted } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useFakeContentStore } from '../stores/useFakeContentStore.js'
 
 const fakeContentStore = useFakeContentStore()
+
+const userVote = ref('') // Peut être 'guilty', 'innocent', ou ''
 
 onMounted(() => {
   fakeContentStore.selectFirstCaseIfNeeded()
@@ -11,22 +13,61 @@ onMounted(() => {
 const finalJudgement = computed(() => {
   if (fakeContentStore.selectedCase) {
     const { guiltyCount, innocentCount } = fakeContentStore.selectedCase
-
     return guiltyCount > innocentCount ? "GUILTY !!!" : "INNOCENT !!!"
   }
-
   return ''
 })
 
 const verdictColor = computed(() => {
   if (fakeContentStore.selectedCase) {
     const { guiltyCount, innocentCount } = fakeContentStore.selectedCase
-
     return guiltyCount > innocentCount ? "text-red-500" : "text-green-500"
   }
-
   return ''
 })
+
+// Fonction pour voter "Guilty"
+const voteGuilty = () => {
+  if (userVote.value === 'guilty') {
+    // Si déjà "Guilty", annuler le vote
+    fakeContentStore.selectedCase.guiltyCount--
+    userVote.value = ''
+  } else {
+    // Si ce n'était pas "Guilty", enregistrer le vote
+    if (userVote.value === 'innocent') {
+      fakeContentStore.selectedCase.innocentCount-- // Annuler le vote innocent
+    }
+    fakeContentStore.selectedCase.guiltyCount++
+    userVote.value = 'guilty'
+  }
+}
+
+// Fonction pour voter "Innocent"
+const voteInnocent = () => {
+  if (userVote.value === 'innocent') {
+    // Si déjà "Innocent", annuler le vote
+    fakeContentStore.selectedCase.innocentCount--
+    userVote.value = ''
+  } else {
+    // Si ce n'était pas "Innocent", enregistrer le vote
+    if (userVote.value === 'guilty') {
+      fakeContentStore.selectedCase.guiltyCount-- // Annuler le vote guilty
+    }
+    fakeContentStore.selectedCase.innocentCount++
+    userVote.value = 'innocent'
+  }
+}
+
+// Vérification si l'utilisateur a voté
+const isVoted = computed(() => {
+  return userVote.value !== '' // True si un vote a été donné
+})
+
+// Vérification si l'utilisateur a voté "Guilty"
+const isGuiltyVoted = computed(() => userVote.value === 'guilty')
+
+// Vérification si l'utilisateur a voté "Innocent"
+const isInnocentVoted = computed(() => userVote.value === 'innocent')
 </script>
 
 <template>
@@ -44,10 +85,12 @@ const verdictColor = computed(() => {
           <div class="size-24 col-span-full m-auto md:size-48">
             <img src="~/assets/images/themis.webp" class="w-full h-full" alt="picture of a judge" />
           </div>
-          <button @click="fakeContentStore.selectedCase.guiltyCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-red-800 rounded-xl text-white duration-300 hover:bg-red-600 hover:text-red-100">
+          <!-- Bouton "Guilty" -->
+          <button @click="voteGuilty" :class="{'bg-red-800/40': isGuiltyVoted, 'bg-red-600': !isGuiltyVoted}" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl text-white duration-300">
             <span>Guilty</span>
           </button>
-          <button @click="fakeContentStore.selectedCase.innocentCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-green-800 rounded-xl text-white duration-300 hover:bg-green-600 hover:text-green-100">
+          <!-- Bouton "Innocent" -->
+          <button @click="voteInnocent" :class="{'bg-green-800/40': isInnocentVoted, 'bg-green-600': !isInnocentVoted}" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl text-white duration-300">
             <span>Innocent</span>
           </button>
         </div>
