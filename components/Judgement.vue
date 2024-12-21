@@ -1,47 +1,31 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useFakeContentStore } from '../stores/useFakeContentStore.js'
 
 const fakeContentStore = useFakeContentStore()
 
-const guiltyCount = ref(1)
-const innocentCount = ref(1)
-const verdictColor = ref("")
-// const isGuiltySelected = ref(false)
-// const isInnocentSelected = ref(false)
-
-// const toggleGuilty = () => {
-//   if (isGuiltySelected.value) {
-//     guiltyCount.value -= 1
-//   } else {
-//     guiltyCount.value += 1
-//   }
-//   isGuiltySelected.value = !isGuiltySelected.value
-// }
-
-// const toggleInnocent = () => {
-//   if (isInnocentSelected.value) {
-//     innocentCount.value -= 1
-//   } else {
-//     innocentCount.value += 1
-//   }
-//   isInnocentSelected.value = !isInnocentSelected.value
-// }
-
-const finalJudgement = computed(() => {
-  if (guiltyCount.value > innocentCount.value) {
-    verdictColor.value = "text-red-500"
-
-    return "GUILTY !!!"
-  } else {
-    verdictColor.value = "text-green-500"
-
-    return "INNOCENT !!!"
-  }
-})
-
 onMounted(() => {
   fakeContentStore.selectFirstCaseIfNeeded()
+})
+
+const finalJudgement = computed(() => {
+  if (fakeContentStore.selectedCase) {
+    const { guiltyCount, innocentCount } = fakeContentStore.selectedCase
+
+    return guiltyCount > innocentCount ? "GUILTY !!!" : "INNOCENT !!!"
+  }
+
+  return ''
+})
+
+const verdictColor = computed(() => {
+  if (fakeContentStore.selectedCase) {
+    const { guiltyCount, innocentCount } = fakeContentStore.selectedCase
+
+    return guiltyCount > innocentCount ? "text-red-500" : "text-green-500"
+  }
+
+  return ''
 })
 </script>
 
@@ -60,10 +44,10 @@ onMounted(() => {
           <div class="size-24 col-span-full m-auto md:size-48">
             <img src="~/assets/images/themis.webp" class="w-full h-full" alt="picture of a judge" />
           </div>
-          <button @click="guiltyCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-red-800 rounded-xl text-white duration-300 hover:bg-red-600 hover:text-red-100">
+          <button @click="fakeContentStore.selectedCase.guiltyCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-red-800 rounded-xl text-white duration-300 hover:bg-red-600 hover:text-red-100">
             <span>Guilty</span>
           </button>
-          <button @click="innocentCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-green-800 rounded-xl text-white duration-300 hover:bg-green-600 hover:text-green-100">
+          <button @click="fakeContentStore.selectedCase.innocentCount++" class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border bg-green-800 rounded-xl text-white duration-300 hover:bg-green-600 hover:text-green-100">
             <span>Innocent</span>
           </button>
         </div>
@@ -73,7 +57,8 @@ onMounted(() => {
             <img src="~/assets/images/icons/gavel.svg" class="size-8 mx-auto mb-2 animate-hammerSwing" alt="gavel">
             <p class="text-xl font-bold"><span :class="verdictColor">{{ finalJudgement }}</span></p>
           </div>
-          <VerdictChart :guiltyCount="guiltyCount" :innocentCount="innocentCount" />
+          <!-- Pass the counts to the VerdictChart component -->
+          <VerdictChart :guiltyCount="fakeContentStore.selectedCase.guiltyCount" :innocentCount="fakeContentStore.selectedCase.innocentCount" />
         </div>
       </div>
     </div>
