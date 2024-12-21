@@ -65,13 +65,13 @@ const isInnocentVoted = computed(() => userVote.value === 'innocent')
   <div v-if="fakeContentStore.selectedCase" class="grid grid-cols-1 justify-items-center items-center gap-8 mx-auto md:self-center">
     <div class="flex flex-col items-center gap-9">
       <div class="grid gap-6">
-        <h2 class="text-2xl font-bold text-red-800 md:text-4xl">{{ fakeContentStore.selectedCase.message }}</h2>
+        <h2 class="text-2xl font-bold text-red-800 md:text-3xl">{{ fakeContentStore.selectedCase.message }}</h2>
       </div>
 
       <div class="grid grid-cols-1 place-items-start justify-items-center gap-6 w-full xl:grid-cols-2 xl:gap-12">
         <div class="grid grid-cols-2 gap-4 w-full">
           <div class="col-span-full">
-            <p class="italic font-light md:text-xs">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
+            <p class="italic font-light text-black/80 md:text-xs">Ladies and gentlemen of the jury, your duty is to deliberate based on the evidence and the law as I’ve explained it. Your verdict must be impartial and unanimous.</p>
           </div>
           <div class="size-24 col-span-full m-auto md:size-48">
             <img src="~/assets/images/themis.webp" class="w-full h-full" alt="picture of a judge" />
@@ -86,8 +86,7 @@ const isInnocentVoted = computed(() => userVote.value === 'innocent')
 
         <div class="flex flex-col items-center gap-4 w-full">
           <div>
-            <img src="~/assets/images/icons/gavel.svg" class="size-8 mx-auto mb-2 animate-hammerSwing" alt="gavel">
-            <p class="text-xl font-bold"><span :class="verdictColor">{{ finalJudgement }}</span></p>
+            <p class="font-bold text-black/80">{{ fakeContentStore.selectedCase.user }} is <span :class="verdictColor">{{ finalJudgement }}</span></p>
           </div>
           <VerdictChart :guiltyCount="fakeContentStore.selectedCase.guiltyCount" :innocentCount="fakeContentStore.selectedCase.innocentCount" />
         </div>
