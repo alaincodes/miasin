@@ -8,11 +8,13 @@ const userVote = ref('')
 
 onMounted(() => {
   fakeContentStore.selectFirstCaseIfNeeded()
+  // console.log(fakeContentStore.incrementGuilty(2))
 })
 
 const finalJudgement = computed(() => {
   if (fakeContentStore.selectedCase) {
     const { guiltyCount, innocentCount } = fakeContentStore.selectedCase
+
     return guiltyCount > innocentCount ? "GUILTY !!!" : "INNOCENT !!!"
   }
   return ''

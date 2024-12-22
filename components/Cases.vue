@@ -20,6 +20,10 @@ const fakeContentStore = useFakeContentStore()
             <p><strong>Case:</strong> {{ item.message }}</p>
           </template>
           <template #caseVerdict>
+            <div>
+              <p>Guilty count: <strong>{{ item.guiltyCount }}</strong></p>
+              <p>Innocent count <strong>{{ item.innocentCount }}</strong></p>
+            </div>
             <p>
               Verdict: <strong>{{ item.user }}</strong> is
               <span
