@@ -65,6 +65,12 @@ const isInnocentVoted = computed(() => userVote.value === "innocent");
 	>
 		<div class="flex flex-col items-center gap-9">
 			<div class="grid gap-6">
+				<h2>
+					<strong>Anonymous</strong> filed a complaint against
+					<strong>{{ fakeContentStore.selectedCase.user }}</strong> on
+					<strong>{{ fakeContentStore.selectedCase.date }}</strong> at
+					<strong>{{ fakeContentStore.selectedCase.time }}</strong>
+				</h2>
 				<h2 class="text-2xl font-bold text-red-800 md:text-3xl">
 					{{ fakeContentStore.selectedCase.message }}
 				</h2>
