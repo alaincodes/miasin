@@ -1,6 +1,6 @@
 <template>
-  <h1 class="mb-6 text-3xl text-center">Add new case</h1>
-  <div class="container grid place-content-center mx-auto">
+  <div class="grid place-content-center p-6 mx-auto">
+    <h1 class="mb-6 text-3xl text-center">Add new case</h1>
     <form>
       <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
         <label>
