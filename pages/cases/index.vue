@@ -1,3 +1,3 @@
 <template>
-  <Cases />
+	<Cases />
 </template>
