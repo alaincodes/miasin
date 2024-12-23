@@ -32,8 +32,8 @@ onMounted(() => {
 					{
 						label: "Verdict",
 						data: data.value.map((row) => row.count),
-						backgroundColor: ["rgb(239, 68, 68)", "rgb(34, 197, 94)"],
-						borderWidth: 2,
+						backgroundColor: ["#ffd859", "#51a256"],
+						borderWidth: 1,
 					},
 				],
 			},

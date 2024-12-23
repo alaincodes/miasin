@@ -8,7 +8,7 @@ const fakeContentStore = useFakeContentStore();
 	<div
 		class="grid grid-cols-1 gap-9 content-start md:h-full md:overflow-y-auto"
 	>
-		<h2 class="text-center text-3xl font-bold text-cyan-900">Cases:</h2>
+		<h2 class="text-center text-3xl font-bold text-white">Cases:</h2>
 		<ul class="flex flex-col divide-y divide-slate-900">
 			<li
 				v-for="(item, index) in fakeContentStore.cases"
@@ -49,7 +49,9 @@ const fakeContentStore = useFakeContentStore();
 						<span
 							class="font-bold uppercase"
 							:class="
-								item.judgement === 'Guilty' ? 'text-red-600' : 'text-green-600'
+								item.judgement === 'Guilty'
+									? 'text-c-yellow-1'
+									: 'text-c-green-3'
 							"
 						>
 							{{ item.judgement }}
@@ -59,7 +61,7 @@ const fakeContentStore = useFakeContentStore();
 						<li>
 							<button
 								@click="fakeContentStore.incrementGuilty(item.id)"
-								class="bg-red-600 col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl text-white duration-300"
+								class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border border-transparent rounded-xl duration-300 bg-c-yellow-1 text-c-black hover:bg-yellow-900 hover:border-yellow-900"
 							>
 								Guilty
 							</button>
@@ -67,7 +69,7 @@ const fakeContentStore = useFakeContentStore();
 						<li>
 							<button
 								@click="fakeContentStore.incrementInnocent(item.id)"
-								class="bg-green-600 col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl text-white duration-300"
+								class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border border-transparent rounded-xl duration-300 bg-c-green-3 text-c-black hover:bg-green-900 hover:border-green-900"
 							>
 								Innocent
 							</button>

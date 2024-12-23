@@ -4,7 +4,7 @@
 		<form>
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 				<label>
-					<span class="text-gray-700">Identity of the Offender/Criminal</span>
+					<span class="text-white">Identity of the Offender/Criminal</span>
 					<input
 						type="text"
 						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
@@ -13,9 +13,9 @@
 				</label>
 
 				<label>
-					<span class="text-gray-700">What type of crime is it?</span>
+					<span class="text-white">What type of crime is it?</span>
 					<select
-						class="block w-full mt-1 rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+						class="block w-full mt-1 rounded-md bg-gray-100 border-transparent text-c-black/70 focus:border-gray-500 focus:bg-white focus:ring-0"
 					>
 						<option value="" disabled selected>Select crime</option>
 						<option>Crime 1</option>
@@ -28,23 +28,23 @@
 				</label>
 
 				<label>
-					<span class="text-gray-700">When it happened ?</span>
+					<span class="text-white">When it happened ?</span>
 					<input
 						type="date"
-						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent text-c-black/70 focus:border-gray-500 focus:bg-white focus:ring-0"
 					/>
 				</label>
 
 				<label class="block">
-					<span class="text-gray-700">What time ?</span>
+					<span class="text-white">What time ?</span>
 					<input
 						type="time"
-						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent text-c-black/70 focus:border-gray-500 focus:bg-white focus:ring-0"
 					/>
 				</label>
 
 				<label class="col-span-full">
-					<span class="text-gray-700">Crime title</span>
+					<span class="text-white">Crime title</span>
 					<input
 						type="text"
 						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
@@ -53,7 +53,7 @@
 				</label>
 
 				<label class="col-span-full">
-					<span class="text-gray-700">Details</span>
+					<span class="text-white">Details</span>
 					<textarea
 						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
 						rows="4"
@@ -66,7 +66,7 @@
 						<input
 							placeholder="Submit"
 							type="submit"
-							class="py-2 px-3 rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 cursor-pointer"
+							class="py-2 px-3 rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-c-black focus:ring-1 focus:ring-offset-2 focus:ring-gray-500 cursor-pointer"
 						/>
 						<span class="sr-only">Submit</span>
 					</label>
@@ -74,7 +74,7 @@
 					<label class="inline-flex items-center">
 						<input
 							type="checkbox"
-							class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-gray-700 focus:ring-1 focus:ring-offset-2 focus:ring-gray-500"
+							class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-white focus:ring-1 focus:ring-offset-2 focus:ring-gray-500"
 						/>
 						<span class="ml-2">I prefer to stay anonymous.</span>
 					</label>

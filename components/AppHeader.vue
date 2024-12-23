@@ -1,6 +1,6 @@
 <template>
 	<header
-		class="z-50 fixed top-0 w-full h-[--header-height] p-4 bg-red-800 text-white"
+		class="z-50 fixed top-0 w-full h-[--header-height] p-4 bg-c-black-light text-white"
 	>
 		<div class="container flex items-center justify-between mx-auto">
 			<NuxtLink href="/" class="grid grid-flow-col items-center gap-2">

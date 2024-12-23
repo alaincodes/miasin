@@ -18,6 +18,13 @@ export default {
 				"c-yellow-2": "#f7d33",
 				"c-yellow-3": "#dec96e",
 				"c-black": "#111827",
+				"c-black-darker": "#0d121b",
+				"c-black-light": "#161f32",
+				"c-black-lighter": "#262a44",
+				"c-green-1": "#52ce63",
+				"c-green-2": "#8ae99c",
+				"c-green-3": "#51a256",
+				"c-green-soft": "#316334",
 			},
 			keyframes: {
 				hammerSwing: {

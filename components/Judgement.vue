@@ -22,7 +22,7 @@ const verdictColor = computed(() => {
 	if (fakeContentStore.selectedCase) {
 		const { guiltyCount, innocentCount } = fakeContentStore.selectedCase;
 
-		return guiltyCount > innocentCount ? "text-red-500" : "text-green-500";
+		return guiltyCount > innocentCount ? "text-c-yellow-1" : "text-c-green-3";
 	}
 	return "";
 });
@@ -49,14 +49,14 @@ const verdictColor = computed(() => {
 					</li>
 				</ul>
 			</div>
-			<div class="grid gap-6">
+			<div class="grid gap-6 text-white">
 				<h2>
 					<strong>Anonymous</strong> filed a complaint against
 					<strong>{{ fakeContentStore.selectedCase.user }}</strong> on
 					<strong>{{ fakeContentStore.selectedCase.date }}</strong> at
 					<strong>{{ fakeContentStore.selectedCase.time }}</strong>
 				</h2>
-				<h2 class="text-2xl font-bold text-red-800 md:text-3xl">
+				<h2 class="text-2xl font-bold text-white md:text-3xl">
 					{{ fakeContentStore.selectedCase.message }}
 				</h2>
 			</div>
@@ -66,7 +66,7 @@ const verdictColor = computed(() => {
 			>
 				<div class="grid grid-cols-2 gap-4 w-full">
 					<div class="col-span-full">
-						<p class="italic font-light text-black/80 md:text-xs">
+						<p class="italic font-light text-white md:text-xs">
 							Ladies and gentlemen of the jury, your duty is to deliberate based
 							on the evidence and the law as I’ve explained it. Your verdict
 							must be impartial and unanimous.
@@ -83,7 +83,7 @@ const verdictColor = computed(() => {
 						@click="
 							fakeContentStore.incrementGuilty(fakeContentStore.selectedCase.id)
 						"
-						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl bg-red-600 text-white duration-300"
+						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border border-transparent rounded-xl bg-c-yellow-1 text-c-black duration-300 hover:bg-yellow-900 hover:border-yellow-900"
 					>
 						<span>Guilty</span>
 					</button>
@@ -93,7 +93,7 @@ const verdictColor = computed(() => {
 								fakeContentStore.selectedCase.id
 							)
 						"
-						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl bg-green-600 text-white duration-300"
+						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border border-transparent rounded-xl bg-c-green-3 text-c-black duration-300 hover:bg-green-900 hover:border-green-900"
 					>
 						<span>Innocent</span>
 					</button>
@@ -101,7 +101,7 @@ const verdictColor = computed(() => {
 
 				<div class="flex flex-col items-center gap-4 w-full">
 					<div>
-						<p class="font-bold text-black/80">
+						<p class="font-bold text-white">
 							{{ fakeContentStore.selectedCase.user }} is
 							<span :class="verdictColor">{{ finalJudgement }}</span>
 						</p>
