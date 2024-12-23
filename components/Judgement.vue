@@ -7,7 +7,7 @@ const fakeContentStore = useFakeContentStore();
 const userVote = ref("");
 
 onMounted(() => {
-	fakeContentStore.selectFirstCaseIfNeeded();
+	fakeContentStore.selectFirstCase();
 });
 
 const finalJudgement = computed(() => {
@@ -16,12 +16,14 @@ const finalJudgement = computed(() => {
 
 		return guiltyCount > innocentCount ? "GUILTY !!!" : "INNOCENT !!!";
 	}
+
 	return "";
 });
 
 const verdictColor = computed(() => {
 	if (fakeContentStore.selectedCase) {
 		const { guiltyCount, innocentCount } = fakeContentStore.selectedCase;
+
 		return guiltyCount > innocentCount ? "text-red-500" : "text-green-500";
 	}
 	return "";

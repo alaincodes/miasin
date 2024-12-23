@@ -93,32 +93,14 @@ export const useFakeContentStore = defineStore('fakeContent', {
   },
 
   actions: {
-    addCase(newCase) {
-      this.cases.push(newCase)
-    },
     selectCase(caseItem) {
+      console.log(caseItem)
       this.selectedCase = caseItem
     },
-    selectFirstCaseIfNeeded() {
+    selectFirstCase() {
       if (!this.selectedCase && this.cases.length > 0) {
         this.selectedCase = this.cases[0];
       }
     },
-    incrementGuilty(id) {
-      const caseItem = this.cases.find((caseItem) => caseItem.id === id);
-      if (caseItem) {
-        caseItem.guiltyCount++
-        return caseItem
-      }
-      return null
-    },
-    decrementGuilty(id) {
-      const caseItem = this.cases.find((caseItem) => caseItem.id === id);
-      if (caseItem) {
-        caseItem.guiltyCount--
-        return caseItem
-      }
-      return null
-    }
   },
 })
