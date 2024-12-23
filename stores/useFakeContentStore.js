@@ -13,7 +13,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Innocent",
 				guiltyCount: 1,
 				innocentCount: 1,
-				topics: ["topic 1", "topic 2", "topic 3", "topic 4"],
+				topics: ["hate speech", "racism"],
 			},
 			{
 				id: 2,
@@ -25,6 +25,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Guilty",
 				guiltyCount: 138,
 				innocentCount: 60,
+				topics: ["bad faith"],
 			},
 			{
 				id: 3,
@@ -36,6 +37,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Innocent",
 				guiltyCount: 10,
 				innocentCount: 55,
+				topics: ["bully", "sexism"],
 			},
 			{
 				id: 4,
@@ -47,6 +49,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Guilty",
 				guiltyCount: 117,
 				innocentCount: 73,
+				topics: [],
 			},
 			{
 				id: 5,
@@ -58,6 +61,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Guilty",
 				guiltyCount: 125,
 				innocentCount: 90,
+				topics: ["hate speech", "racism", "bad faith"],
 			},
 			{
 				id: 6,
@@ -69,6 +73,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Guilty",
 				guiltyCount: 56,
 				innocentCount: 81,
+				topics: ["coward"],
 			},
 			{
 				id: 7,
@@ -80,6 +85,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Innocent",
 				guiltyCount: 8,
 				innocentCount: 12,
+				topics: ["liar", "cheater"],
 			},
 			{
 				id: 8,
@@ -91,6 +97,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				judgement: "Guilty",
 				guiltyCount: 34,
 				innocentCount: 56,
+				topics: ["first time"],
 			},
 		],
 

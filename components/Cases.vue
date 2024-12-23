@@ -18,9 +18,17 @@ const fakeContentStore = useFakeContentStore();
 				<div
 					class="grid gap-3 max-w-full w-full py-4 px-6 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20 md:p-6"
 				>
-					<div class="flex gap-3">
+					<div v-if="item.topics.length > 0" class="flex gap-3">
 						<p>Topic:</p>
-						<LabelList />
+						<ul class="flex flex-wrap gap-1">
+							<li v-for="topic in item.topics">
+								<button
+									class="px-3 py-1 bg-c-yellow-1 rounded-3xl text-c-black text-xs"
+								>
+									{{ topic }}
+								</button>
+							</li>
+						</ul>
 					</div>
 					<p>
 						<strong>Anonymous</strong> filed a complaint on
