@@ -94,13 +94,27 @@ export const useFakeContentStore = defineStore('fakeContent', {
 
   actions: {
     selectCase(caseItem) {
-      console.log(caseItem)
-      this.selectedCase = caseItem
+      // console.log(caseItem)
+      this.selectedCase = caseItem;
     },
     selectFirstCase() {
       if (!this.selectedCase && this.cases.length > 0) {
         this.selectedCase = this.cases[0];
       }
+    },
+    incrementGuilty(id) {
+      this.cases.find(item => {
+        if (item.id === id) {
+          item.guiltyCount++
+        }
+      })
+    },
+    incrementInnocent(id) {
+      this.cases.find(item => {
+        if (item.id === id) {
+          item.innocentCount++
+        }
+      })
     },
   },
 })

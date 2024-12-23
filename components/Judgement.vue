@@ -4,8 +4,6 @@ import { useFakeContentStore } from "../stores/useFakeContentStore.js";
 
 const fakeContentStore = useFakeContentStore();
 
-const userVote = ref("");
-
 onMounted(() => {
 	fakeContentStore.selectFirstCase();
 });
@@ -28,36 +26,6 @@ const verdictColor = computed(() => {
 	}
 	return "";
 });
-
-const voteGuilty = () => {
-	if (userVote.value === "guilty") {
-		fakeContentStore.selectedCase.guiltyCount--;
-		userVote.value = "";
-	} else {
-		if (userVote.value === "innocent") {
-			fakeContentStore.selectedCase.innocentCount--;
-		}
-		fakeContentStore.selectedCase.guiltyCount++;
-		userVote.value = "guilty";
-	}
-};
-
-const voteInnocent = () => {
-	if (userVote.value === "innocent") {
-		fakeContentStore.selectedCase.innocentCount--;
-		userVote.value = "";
-	} else {
-		if (userVote.value === "guilty") {
-			fakeContentStore.selectedCase.guiltyCount--;
-		}
-		fakeContentStore.selectedCase.innocentCount++;
-		userVote.value = "innocent";
-	}
-};
-
-const isGuiltyVoted = computed(() => userVote.value === "guilty");
-
-const isInnocentVoted = computed(() => userVote.value === "innocent");
 </script>
 
 <template>
@@ -97,22 +65,14 @@ const isInnocentVoted = computed(() => userVote.value === "innocent");
 						/>
 					</div>
 					<button
-						@click="voteGuilty"
-						:class="{
-							'bg-red-800/40': isGuiltyVoted,
-							'bg-red-600': !isGuiltyVoted,
-						}"
-						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl text-white duration-300"
+            @click="fakeContentStore.incrementGuilty(fakeContentStore.selectedCase.id)"
+						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl bg-red-600 text-white duration-300"
 					>
 						<span>Guilty</span>
 					</button>
 					<button
-						@click="voteInnocent"
-						:class="{
-							'bg-green-800/40': isInnocentVoted,
-							'bg-green-600': !isInnocentVoted,
-						}"
-						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl text-white duration-300"
+            @click="fakeContentStore.incrementInnocent(fakeContentStore.selectedCase.id)"
+						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl bg-green-600 text-white duration-300"
 					>
 						<span>Innocent</span>
 					</button>
