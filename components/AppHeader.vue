@@ -3,11 +3,11 @@
 		class="z-50 fixed top-0 w-full h-[--header-height] p-4 bg-red-800 text-white"
 	>
 		<div class="container flex items-center justify-between mx-auto">
-			<a href="/" class="grid grid-flow-col items-center gap-2">
+			<NuxtLink href="/" class="grid grid-flow-col items-center gap-2">
 				<div class="w-7">
 					<img src="~/assets/images/icons/judge.webp" />
 				</div>
-			</a>
+			</NuxtLink>
 			<nav>
 				<ul class="flex gap-4">
 					<li><NuxtLink to="/cases/new">New Case</NuxtLink></li>
