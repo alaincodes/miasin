@@ -13,6 +13,12 @@ export default {
 	],
 	theme: {
 		extend: {
+			colors: {
+				"c-yellow-1": "#ffd859",
+				"c-yellow-2": "#f7d33",
+				"c-yellow-3": "#dec96e",
+				"c-black": "#111827",
+			},
 			keyframes: {
 				hammerSwing: {
 					"0%": {

@@ -34,6 +34,10 @@ const verdictColor = computed(() => {
 		class="grid grid-cols-1 justify-items-center items-center gap-8 mx-auto md:self-center"
 	>
 		<div class="flex flex-col items-center gap-9">
+			<div class="flex gap-3">
+				<p>Topic:</p>
+				<LabelList />
+			</div>
 			<div class="grid gap-6">
 				<h2>
 					<strong>Anonymous</strong> filed a complaint against
@@ -65,13 +69,19 @@ const verdictColor = computed(() => {
 						/>
 					</div>
 					<button
-            @click="fakeContentStore.incrementGuilty(fakeContentStore.selectedCase.id)"
+						@click="
+							fakeContentStore.incrementGuilty(fakeContentStore.selectedCase.id)
+						"
 						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl bg-red-600 text-white duration-300"
 					>
 						<span>Guilty</span>
 					</button>
 					<button
-            @click="fakeContentStore.incrementInnocent(fakeContentStore.selectedCase.id)"
+						@click="
+							fakeContentStore.incrementInnocent(
+								fakeContentStore.selectedCase.id
+							)
+						"
 						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border rounded-xl bg-green-600 text-white duration-300"
 					>
 						<span>Innocent</span>
