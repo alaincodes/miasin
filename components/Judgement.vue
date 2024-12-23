@@ -34,20 +34,28 @@ const verdictColor = computed(() => {
 		class="grid grid-cols-1 justify-items-center items-center gap-8 mx-auto md:self-center"
 	>
 		<div class="flex flex-col items-center gap-9">
-			<div
-				v-if="fakeContentStore.selectedCase.topics.length > 0"
-				class="flex gap-3"
-			>
-				<p>Topic:</p>
-				<ul class="flex flex-wrap gap-1">
-					<li v-for="topic in fakeContentStore.selectedCase.topics">
-						<button
-							class="px-3 py-1 bg-c-yellow-1 rounded-3xl text-c-black text-xs"
-						>
-							{{ topic }}
-						</button>
-					</li>
-				</ul>
+			<div class="flex flex-col gap-6 w-full xl:flex-row xl:justify-between">
+				<h2
+					v-if="fakeContentStore.selectedCase.id === 1"
+					class="whitespace-nowrap font-bold uppercase"
+				>
+					Case of the day
+				</h2>
+				<div
+					v-if="fakeContentStore.selectedCase.topics.length > 0"
+					class="flex gap-3"
+				>
+					<p>Topic:</p>
+					<ul class="flex flex-wrap gap-1">
+						<li v-for="topic in fakeContentStore.selectedCase.topics">
+							<button
+								class="px-3 py-1 bg-c-yellow-1 rounded-3xl text-c-black text-xs"
+							>
+								{{ topic }}
+							</button>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div class="grid gap-6 text-white">
 				<h2>
