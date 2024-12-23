@@ -2,7 +2,7 @@
 	<AppHeader />
 
 	<div
-		class="[--header-height:3.75rem] container grid mx-auto pt-[--header-height] md:min-h-dvh"
+		class="[--header-height:3.75rem] container grid min-h-dvh mx-auto pt-[--header-height]"
 	>
 		<slot></slot>
 	</div>

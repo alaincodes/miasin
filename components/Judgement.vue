@@ -65,13 +65,6 @@ const verdictColor = computed(() => {
 				class="grid grid-cols-1 place-items-start justify-items-center gap-6 w-full xl:grid-cols-2 xl:gap-12"
 			>
 				<div class="grid grid-cols-2 gap-4 w-full">
-					<div class="col-span-full">
-						<p class="italic font-light text-white md:text-xs">
-							Ladies and gentlemen of the jury, your duty is to deliberate based
-							on the evidence and the law as I’ve explained it. Your verdict
-							must be impartial and unanimous.
-						</p>
-					</div>
 					<div class="size-24 col-span-full m-auto md:size-48">
 						<img
 							src="~/assets/images/themis.webp"

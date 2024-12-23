@@ -1,3 +1,0 @@
-<template>
-	<HistoryChart />
-</template>
