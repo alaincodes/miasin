@@ -36,7 +36,7 @@ const fakeContentStore = useFakeContentStore();
 						</ul>
 					</div>
           <div class="flex items-center gap-1">
-            <p class="italic">
+            <p class="text-xs italic">
               <strong>{{ item.accuser }}</strong> filed a complaint against
               <strong>{{ item.accused }}</strong>
               on <strong>{{ item.date }}</strong> at
