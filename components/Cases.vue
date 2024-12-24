@@ -9,14 +9,14 @@ const fakeContentStore = useFakeContentStore();
 		class="grid grid-cols-1 gap-9 content-start md:h-full md:overflow-y-auto"
 	>
 		<h2 class="text-center text-3xl font-bold text-white">Cases:</h2>
-		<ul class="flex flex-col divide-y divide-slate-900">
+		<ul class="flex flex-col divide-y divide-c-yellow-1">
 			<li
 				v-for="(item, index) in fakeContentStore.cases"
 				:key="index"
 				@click="fakeContentStore.selectCase(item)"
 			>
 				<div
-					class="grid gap-3 max-w-full w-full py-4 px-6 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20 md:p-6"
+					class="grid gap-3 max-w-full w-full py-4 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20 md:px-6"
 				>
 					<div v-if="item.topics.length > 0" class="flex gap-3">
 						<p>Topic:</p>
