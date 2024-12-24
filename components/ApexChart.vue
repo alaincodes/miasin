@@ -69,7 +69,6 @@ onMounted(() => {
       },
     }
 
-    // Construire un ID valide pour l'élément en ajoutant un préfixe
     const chartElementId = `apexchart-${props.id}`;
     chart.value = new ApexCharts.default(document.querySelector(`#${chartElementId}`), options);
     chart.value.render();
@@ -89,6 +88,5 @@ watch([() => props.guiltyCount, () => props.innocentCount], () => {
 </script>
 
 <template>
-  <!-- Utilisation d'un id dynamique construit à partir de `props.id` -->
-  <div :id="'apexchart-' + props.id"></div>
+  <div :id="`apexchart-${props.id}`"></div>
 </template>
