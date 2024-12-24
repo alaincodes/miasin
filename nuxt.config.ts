@@ -4,6 +4,10 @@ export default defineNuxtConfig({
 
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
+    head: {
+      charset: 'utf-8',
+      title: 'MIASIN YOU ARE THE JUDGE',
+    }
 	},
 
 	devtools: { enabled: true },

@@ -1,3 +1,11 @@
+<script setup>
+useHead({
+  title: 'Rules',
+  meta: [
+    { name: 'description', content: 'Judges rules !' }
+  ],
+})
+</script>
 <template>
 	<div class="prose grid place-content-center mx-auto p-6 text-white">
 		<p class="text-2xl italic">
