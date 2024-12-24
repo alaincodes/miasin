@@ -6,7 +6,7 @@ const fakeContentStore = useFakeContentStore();
 
 <template>
 	<div
-		class="grid grid-cols-1 gap-9 content-start md:h-full md:overflow-y-auto"
+		class="grid grid-cols-1 gap-6 content-start md:h-full md:overflow-y-auto"
 	>
 		<h2 class="text-center text-3xl font-bold text-white">Cases:</h2>
 		<ul class="flex flex-col divide-y divide-c-yellow-1">
