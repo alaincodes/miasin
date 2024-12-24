@@ -111,12 +111,6 @@ const verdictColor = computed(() => {
 						:guiltyCount="fakeContentStore.selectedCase.guiltyCount"
 						:innocentCount="fakeContentStore.selectedCase.innocentCount"
 					/>
-
-          <!-- <ApexChart
-            :id="fakeContentStore.selectedCase.id"
-            :guiltyCount="fakeContentStore.selectedCase.guiltyCount"
-						:innocentCount="fakeContentStore.selectedCase.innocentCount"
-          /> -->
 				</div>
 			</div>
 		</div>
