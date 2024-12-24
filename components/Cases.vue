@@ -35,12 +35,15 @@ const fakeContentStore = useFakeContentStore();
 							</li>
 						</ul>
 					</div>
-					<p>
-						<strong>{{ item.accuser }}</strong> filed a complaint on
-						<strong>{{ item.date }}</strong> at
-						<strong>{{ item.time }}</strong>
-					</p>
-					<p><strong>Case:</strong> {{ item.message }}</p>
+          <div class="flex items-center gap-1">
+            <p class="italic">
+              <strong>{{ item.accuser }}</strong> filed a complaint against
+              <strong>{{ item.accused }}</strong>
+              on <strong>{{ item.date }}</strong> at
+              <strong>{{ item.time }}</strong>
+            </p>
+          </div>
+					<p class="text-xl">{{ item.message }}</p>
           <ApexChart
             :id="item.id"
             :guiltyCount="item.guiltyCount"
@@ -56,7 +59,7 @@ const fakeContentStore = useFakeContentStore();
 									: 'text-c-green-3'
 							"
 						>
-							{{ item.judgement }}
+							{{ item.judgement }} !!!
 						</span>
 					</p>
 					<ul class="flex gap-4">

@@ -7,7 +7,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 1,
         accuser: "AG",
         accused: "AT",
-				date: "12/12/24",
+				date: "12/12/2024",
 				time: "11h20",
 				message:
 					"Un homme a passé sa vie à chercher la vérité, mais à la fin il a réalisé qu’il avait oublié de vivre. Est-il coupable d’avoir ignoré la vie au profit de la quête de la vérité ?",
@@ -21,7 +21,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 2,
         accuser: "Accuser 2244",
         accused: "Accused 345",
-				date: "14/12/24",
+				date: "14/12/2024",
 				time: "16h00",
 				message:
 					"Une personne a passé des années à accumuler des connaissances, mais n’a jamais agi en conséquence. Est-elle coupable de trahir la véritable essence de la sagesse ?",
@@ -35,7 +35,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 3,
         accuser: "Accuser 9574",
         accused: "Accused 574",
-				date: "18/12/24",
+				date: "18/12/2024",
 				time: "13h30",
 				message:
 					"Un homme a menti pour protéger les sentiments d’une personne, mais a fini par créer une illusion qui l’a emprisonné. Est-il coupable d’avoir sacrifié la vérité pour la paix ?",
@@ -49,7 +49,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 4,
         accuser: "Accuser 234",
         accused: "Accused 954",
-				date: "19/12/24",
+				date: "19/12/2024",
 				time: "09h10",
 				message:
 					"Une femme a sacrifié sa propre liberté pour offrir une sécurité matérielle à sa famille. Est-elle coupable d’avoir échangé son bien-être contre une sécurité illusoire ?",
@@ -63,7 +63,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 5,
         accuser: "Accuser 9584",
         accused: "Accused 6583",
-				date: "22/12/24",
+				date: "22/12/2024",
 				time: "20h05",
 				message:
 					"Un homme a tout donné pour poursuivre un rêve qui, au final, s’est avéré futile. Est-il coupable d’avoir perdu sa vie dans une illusion ?",
@@ -77,7 +77,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 6,
         accuser: "Accuser 1245",
         accused: "Accused 75",
-				date: "23/12/24",
+				date: "23/12/2024",
 				time: "14h40",
 				message:
 					"Un philosophe a passé toute sa vie à déconstruire les idées des autres, mais n’a jamais formulé une pensée originale. Est-il coupable de n’avoir pas cherché à apporter une contribution authentique au monde ?",
@@ -91,7 +91,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 7,
         accuser: "Accuser 95",
         accused: "Accused 85",
-				date: "24/12/24",
+				date: "24/12/2024",
 				time: "18h50",
 				message:
 					"Un artiste a peint un tableau représentant l’humanité, mais avec une image de l’humanité déformée et brisée. Est-il coupable d’avoir révélé une vérité inconfortable sans offrir de solution ?",
@@ -105,7 +105,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
 				id: 8,
         accuser: "Accuser 56",
         accused: "Accused 9564",
-				date: "25/12/24",
+				date: "25/12/2024",
 				time: "07h00",
 				message:
 					"Un homme a cherché la perfection dans tout ce qu’il faisait, mais n’a jamais atteint la paix intérieure. Est-il coupable d’avoir sacrifié son bonheur pour une quête sans fin ?",
