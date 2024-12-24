@@ -36,16 +36,13 @@ const fakeContentStore = useFakeContentStore();
 						<strong>{{ item.time }}</strong>
 					</p>
 					<p><strong>Case:</strong> {{ item.message }}</p>
-					<div>
-						<p>
-							Guilty count: <strong>{{ item.guiltyCount }}</strong>
-						</p>
-						<p>
-							Innocent count <strong>{{ item.innocentCount }}</strong>
-						</p>
-					</div>
+          <ApexChart
+            :id="item.id"
+            :guiltyCount="item.guiltyCount"
+            :innocentCount="item.innocentCount"
+          />
 					<p>
-						Verdict: <strong>{{ item.user }}</strong> is
+						<strong>{{ item.user }}</strong> is
 						<span
 							class="font-bold uppercase"
 							:class="

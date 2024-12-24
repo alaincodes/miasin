@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, onMounted } from "vue";
+import { computed, onMounted } from "vue";
 import { useFakeContentStore } from "../stores/useFakeContentStore.js";
 
 const fakeContentStore = useFakeContentStore();
@@ -111,6 +111,12 @@ const verdictColor = computed(() => {
 						:guiltyCount="fakeContentStore.selectedCase.guiltyCount"
 						:innocentCount="fakeContentStore.selectedCase.innocentCount"
 					/>
+
+          <!-- <ApexChart
+            :id="fakeContentStore.selectedCase.id"
+            :guiltyCount="fakeContentStore.selectedCase.guiltyCount"
+						:innocentCount="fakeContentStore.selectedCase.innocentCount"
+          /> -->
 				</div>
 			</div>
 		</div>
