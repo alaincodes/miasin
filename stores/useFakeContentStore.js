@@ -5,6 +5,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 		cases: [
 			{
 				id: 1,
+        accuser: "AG",
+        accused: "AT",
 				date: "12/12/24",
 				time: "11h20",
 				message:
@@ -17,6 +19,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 2,
+        accuser: "Accuser 2244",
+        accused: "Accused 345",
 				date: "14/12/24",
 				time: "16h00",
 				message:
@@ -29,6 +33,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 3,
+        accuser: "Accuser 9574",
+        accused: "Accused 574",
 				date: "18/12/24",
 				time: "13h30",
 				message:
@@ -41,6 +47,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 4,
+        accuser: "Accuser 234",
+        accused: "Accused 954",
 				date: "19/12/24",
 				time: "09h10",
 				message:
@@ -53,6 +61,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 5,
+        accuser: "Accuser 9584",
+        accused: "Accused 6583",
 				date: "22/12/24",
 				time: "20h05",
 				message:
@@ -65,6 +75,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 6,
+        accuser: "Accuser 1245",
+        accused: "Accused 75",
 				date: "23/12/24",
 				time: "14h40",
 				message:
@@ -77,6 +89,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 7,
+        accuser: "Accuser 95",
+        accused: "Accused 85",
 				date: "24/12/24",
 				time: "18h50",
 				message:
@@ -89,6 +103,8 @@ export const useFakeContentStore = defineStore("fakeContent", {
 			},
 			{
 				id: 8,
+        accuser: "Accuser 56",
+        accused: "Accused 9564",
 				date: "25/12/24",
 				time: "07h00",
 				message:

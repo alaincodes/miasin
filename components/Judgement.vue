@@ -59,8 +59,8 @@ const verdictColor = computed(() => {
 			</div>
 			<div class="grid gap-6 text-white">
 				<h2>
-					<strong>Anonymous</strong> filed a complaint against
-					<strong>{{ fakeContentStore.selectedCase.user }}</strong> on
+					<strong>{{ fakeContentStore.selectedCase.accuser }}</strong> filed a complaint against
+					<strong>{{ fakeContentStore.selectedCase.accused }}</strong> on
 					<strong>{{ fakeContentStore.selectedCase.date }}</strong> at
 					<strong>{{ fakeContentStore.selectedCase.time }}</strong>
 				</h2>
@@ -103,7 +103,7 @@ const verdictColor = computed(() => {
 				<div class="flex flex-col items-center gap-4 w-full">
 					<div>
 						<p class="font-bold text-white">
-							{{ fakeContentStore.selectedCase.user }} is
+							{{ fakeContentStore.selectedCase.accused }} is
 							<span :class="verdictColor">{{ finalJudgement }}</span>
 						</p>
 					</div>

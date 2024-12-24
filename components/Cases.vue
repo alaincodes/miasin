@@ -37,7 +37,7 @@ const fakeContentStore = useFakeContentStore();
 						</ul>
 					</div>
 					<p>
-						<strong>Anonymous</strong> filed a complaint on
+						<strong>{{ item.accuser }}</strong> filed a complaint on
 						<strong>{{ item.date }}</strong> at
 						<strong>{{ item.time }}</strong>
 					</p>
@@ -48,7 +48,7 @@ const fakeContentStore = useFakeContentStore();
             :innocentCount="item.innocentCount"
           />
 					<p>
-						<strong>{{ item.user }}</strong> is
+						<strong>{{ item.accused }}</strong> is
 						<span
 							class="font-bold uppercase"
 							:class="
