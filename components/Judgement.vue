@@ -81,9 +81,7 @@ const verdictColor = computed(() => {
 						/>
 					</div>
 					<button
-						@click="
-							fakeContentStore.incrementGuilty(fakeContentStore.selectedCase.id)
-						"
+						@click="fakeContentStore.incrementGuilty(fakeContentStore.selectedCase.id)"
 						class="col-span-1 grid grid-flow-col place-items-center gap-2 py-2 px-4 border border-transparent rounded-xl bg-c-yellow-1 text-c-black duration-300 hover:bg-yellow-900 hover:border-yellow-900"
 					>
 						<span>Guilty</span>

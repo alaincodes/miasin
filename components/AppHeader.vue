@@ -11,7 +11,7 @@
 			<nav>
 				<ul class="flex gap-4">
 					<li><NuxtLink to="/cases/new">New Case</NuxtLink></li>
-					<li><NuxtLink to="/cases">Cases</NuxtLink></li>
+					<li class="hidden md:block"><NuxtLink to="/cases">Cases</NuxtLink></li>
 					<li><NuxtLink to="/rules">Rules</NuxtLink></li>
 				</ul>
 			</nav>
