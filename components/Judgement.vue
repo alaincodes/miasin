@@ -31,7 +31,7 @@ const verdictColor = computed(() => {
 <template>
 	<div
 		v-if="fakeContentStore.selectedCase"
-		class="grid grid-cols-1 justify-items-center items-center gap-8 mx-auto md:self-center"
+		class="hidden grid-cols-1 justify-items-center items-center gap-8 mx-auto md:grid md:self-center"
 	>
 		<div class="flex flex-col items-center gap-9">
 			<div class="flex flex-col gap-6 w-full xl:flex-row xl:justify-between">
