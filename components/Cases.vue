@@ -16,8 +16,14 @@ const fakeContentStore = useFakeContentStore();
 				@click="fakeContentStore.selectCase(item)"
 			>
 				<div
-					class="grid gap-3 max-w-full w-full py-4 rounded-sm duration-300 cursor-pointer hover:bg-slate-500/20 md:px-6"
+					class="grid gap-3 max-w-full w-full py-4 rounded-sm duration-300 cursor-pointer md:hover:bg-slate-500/20 md:px-6"
 				>
+          <h2
+            v-if="item.id === 1"
+            class="whitespace-nowrap font-bold uppercase"
+          >
+            Case of the day
+          </h2>
 					<div v-if="item.topics.length > 0" class="flex gap-3">
 						<p>Topic:</p>
 						<ul class="flex flex-wrap gap-1">
