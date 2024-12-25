@@ -10,19 +10,19 @@ const fakeContentStore = useFakeContentStore();
 	>
 		<ul class="flex flex-col divide-y divide-c-yellow-1">
 			<li
-				v-for="item in fakeContentStore.cases"
-				:key="item.id"
+				v-for="(item, index) in fakeContentStore.cases"
+				:key="index"
 				@click="fakeContentStore.selectCase(item)"
 			>
 				<div
 					class="grid gap-3 max-w-full w-full py-4 rounded-sm duration-300 cursor-pointer md:hover:bg-slate-500/20 md:px-6"
 				>
-          <h2
-            v-if="item.id === 1"
-            class="whitespace-nowrap font-bold uppercase"
-          >
-            Case of the day
-          </h2>
+					<h2
+						v-if="item.id === 1"
+						class="whitespace-nowrap font-bold uppercase"
+					>
+						Case of the day
+					</h2>
 					<div v-if="item.topics.length > 0" class="flex gap-3">
 						<p>Topic:</p>
 						<ul class="flex flex-wrap gap-1">
@@ -35,31 +35,35 @@ const fakeContentStore = useFakeContentStore();
 							</li>
 						</ul>
 					</div>
-          <div class="flex items-center gap-1">
-            <p class="text-xs italic">
-              <strong>{{ item.accuser }}</strong> filed a complaint against
-              <strong>{{ item.accused }}</strong>
-              on <strong>{{ item.date }}</strong> at
-              <strong>{{ item.time }}</strong>
-            </p>
-          </div>
+					<div class="flex items-center gap-1">
+						<p class="text-xs italic">
+							<strong>{{ item.accuser }}</strong> filed a complaint against
+							<strong>{{ item.accused }}</strong>
+							on <strong>{{ item.date }}</strong> at
+							<strong>{{ item.time }}</strong>
+						</p>
+					</div>
 					<p class="text-xl">{{ item.message }}</p>
-          <ApexChart
-            :id="item.id"
-            :guiltyCount="item.guiltyCount"
-            :innocentCount="item.innocentCount"
-          />
+					<ApexChart
+						:id="item.id"
+						:guiltyCount="item.guiltyCount"
+						:innocentCount="item.innocentCount"
+					/>
 					<p>
 						<strong>{{ item.accused }}</strong> is
 						<span
 							class="font-bold uppercase"
 							:class="
-								item.judgement === 'Guilty'
+								item.guiltyCount > item.innocentCount
 									? 'text-c-yellow-1'
 									: 'text-c-green-3'
 							"
 						>
-							{{ item.judgement }} !!!
+							{{
+								item.guiltyCount > item.innocentCount
+									? "GUILTY !!!"
+									: "INNOCENT !!!"
+							}}
 						</span>
 					</p>
 					<ul class="flex gap-4">
