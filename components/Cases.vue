@@ -10,8 +10,8 @@ const fakeContentStore = useFakeContentStore();
 	>
 		<ul class="flex flex-col divide-y divide-c-yellow-1">
 			<li
-				v-for="(item, index) in fakeContentStore.cases"
-				:key="index"
+				v-for="item in fakeContentStore.cases"
+				:key="item.id"
 				@click="fakeContentStore.selectCase(item)"
 			>
 				<div
@@ -53,11 +53,10 @@ const fakeContentStore = useFakeContentStore();
 						<strong>{{ item.accused }}</strong> is
 						<span
 							class="font-bold uppercase"
-							:class="
-								item.guiltyCount > item.innocentCount
-									? 'text-c-yellow-1'
-									: 'text-c-green-3'
-							"
+							:class="{
+								'text-c-yellow-1': item.guiltyCount > item.innocentCount,
+								'text-c-green-3': item.guiltyCount <= item.innocentCount,
+							}"
 						>
 							{{
 								item.guiltyCount > item.innocentCount
