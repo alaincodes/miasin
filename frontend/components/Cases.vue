@@ -38,7 +38,7 @@ onMounted(() => {
         @click="fakeContentStore.selectCase(item)"
         class="swiper-slide even:bg-slate-500/20 md:!h-auto"
       >
-        <div class="grid gap-4 p-4 md:px-6 md:py-9">
+        <div class="grid gap-4 h-full content-center p-4 md:px-6 md:py-9">
           <CaseInfos
             :topics="item.topics"
             :accuser="item.accuser"
