@@ -19,7 +19,6 @@ onMounted(() => {
 <template>
 	<div class="swiper w-full h-full max-h-screen md:max-h-full">
 		<div
-			ref="el"
 			class="swiper-wrapper md:flex md:flex-col md:divide-y md:divide-c-yellow-1"
 		>
 			<div
