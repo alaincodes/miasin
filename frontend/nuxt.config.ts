@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		pageTransition: { name: "page", mode: "out-in" },
     head: {
       charset: 'utf-8',
-      title: 'MIASIN YOU ARE THE JUDGE',
+      title: 'MIASIN | YOU ARE THE JUDGE',
     }
 	},
 

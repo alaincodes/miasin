@@ -43,16 +43,14 @@ onMounted(() => {
             <p>Topic:</p>
             <ul class="flex flex-wrap gap-1">
               <li v-for="topic in item.topics">
-                <button
-                  class="px-3 py-1 bg-c-yellow-1 rounded-3xl text-c-black text-xs"
-                >
+                <button class="px-3 py-1 bg-c-yellow-1 rounded-3xl text-c-black text-xs">
                   {{ topic }}
                 </button>
               </li>
             </ul>
           </div>
           <div>
-            <p class="text-xs italic">
+            <p class="text-sm italic">
               <strong>{{ item.accuser }}</strong> filed a complaint against
               <strong>{{ item.accused }}</strong>
               on <strong>{{ item.date }}</strong> at

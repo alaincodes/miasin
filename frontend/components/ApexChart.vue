@@ -35,7 +35,7 @@ onMounted(() => {
       colors: ['#ffd859', '#52ce63'],
       plotOptions: {
         bar: {
-          borderRadius: 4,
+          borderRadius: 3,
           borderRadiusApplication: 'end',
           horizontal: true,
         }
