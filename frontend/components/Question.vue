@@ -5,5 +5,5 @@ defineProps({
 </script>
 
 <template>
-  <code class="p-3 rounded-md bg-c-black-light text-xl">{{ question }}</code>
+  <code class="p-3 rounded-md bg-c-black-light md:text-xl">{{ question }}</code>
 </template>
