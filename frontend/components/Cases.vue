@@ -49,7 +49,7 @@ onMounted(() => {
 
           <Question :question="item.question" />
 
-          <ApexChart
+          <VerdictApexChart
             :id="item.id"
             :guiltyCount="item.guiltyCount"
             :innocentCount="item.innocentCount"
