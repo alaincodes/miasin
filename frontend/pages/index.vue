@@ -1,5 +1,5 @@
 <template>
-	<div class="grid grid-cols-1 p-4 md:justify-self-center md:w-6/12 md:py-0">
+	<div class="grid grid-cols-1 p-0 w-full md:justify-self-center xl:w-6/12">
 		<Cases />
 	</div>
 </template>
