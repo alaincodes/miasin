@@ -9,7 +9,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "AT",
 				date: "12/12/2024",
 				time: "11h20",
-				message:
+				question:
 					"Un homme a passé sa vie à chercher la vérité, mais à la fin il a réalisé qu’il avait oublié de vivre. Est-il coupable d’avoir ignoré la vie au profit de la quête de la vérité ?",
 				user: "The accused 1",
 				judgement: "Innocent",
@@ -23,12 +23,12 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 345",
 				date: "14/12/2024",
 				time: "16h00",
-				message:
+				question:
 					"Une personne a passé des années à accumuler des connaissances, mais n’a jamais agi en conséquence. Est-elle coupable de trahir la véritable essence de la sagesse ?",
 				user: "The accused 2",
 				judgement: "Guilty",
-				guiltyCount: 138,
-				innocentCount: 60,
+				guiltyCount: 23,
+				innocentCount: 26,
 				topics: ["bad faith"],
 			},
 			{
@@ -37,7 +37,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 574",
 				date: "18/12/2024",
 				time: "13h30",
-				message:
+				question:
 					"Un homme a menti pour protéger les sentiments d’une personne, mais a fini par créer une illusion qui l’a emprisonné. Est-il coupable d’avoir sacrifié la vérité pour la paix ?",
 				user: "The accused 3",
 				judgement: "Innocent",
@@ -51,7 +51,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 954",
 				date: "19/12/2024",
 				time: "09h10",
-				message:
+				question:
 					"Une femme a sacrifié sa propre liberté pour offrir une sécurité matérielle à sa famille. Est-elle coupable d’avoir échangé son bien-être contre une sécurité illusoire ?",
 				user: "The accused 4",
 				judgement: "Guilty",
@@ -65,7 +65,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 6583",
 				date: "22/12/2024",
 				time: "20h05",
-				message:
+				question:
 					"Un homme a tout donné pour poursuivre un rêve qui, au final, s’est avéré futile. Est-il coupable d’avoir perdu sa vie dans une illusion ?",
 				user: "The accused 5",
 				judgement: "Guilty",
@@ -79,7 +79,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 75",
 				date: "23/12/2024",
 				time: "14h40",
-				message:
+				question:
 					"Un philosophe a passé toute sa vie à déconstruire les idées des autres, mais n’a jamais formulé une pensée originale. Est-il coupable de n’avoir pas cherché à apporter une contribution authentique au monde ?",
 				user: "The accused 6",
 				judgement: "Guilty",
@@ -93,7 +93,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 85",
 				date: "24/12/2024",
 				time: "18h50",
-				message:
+				question:
 					"Un artiste a peint un tableau représentant l’humanité, mais avec une image de l’humanité déformée et brisée. Est-il coupable d’avoir révélé une vérité inconfortable sans offrir de solution ?",
 				user: "The accused 7",
 				judgement: "Innocent",
@@ -107,7 +107,7 @@ export const useFakeContentStore = defineStore("fakeContent", {
         accused: "Accused 9564",
 				date: "25/12/2024",
 				time: "07h00",
-				message:
+				question:
 					"Un homme a cherché la perfection dans tout ce qu’il faisait, mais n’a jamais atteint la paix intérieure. Est-il coupable d’avoir sacrifié son bonheur pour une quête sans fin ?",
 				user: "The accused 8",
 				judgement: "Guilty",

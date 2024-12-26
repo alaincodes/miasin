@@ -47,7 +47,7 @@ onMounted(() => {
             :time="item.time"
           />
 
-          <Question :question="item.message" />
+          <Question :question="item.question" />
 
           <ApexChart
             :id="item.id"

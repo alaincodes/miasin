@@ -59,7 +59,7 @@ const verdictColor = computed(() => {
 					<strong>{{ fakeContentStore.selectedCase.time }}</strong>
 				</h2>
 				<code class="text-2xl font-bold text-white md:text-3xl">
-					{{ fakeContentStore.selectedCase.message }}
+					{{ fakeContentStore.selectedCase.question }}
 				</code>
 			</div>
 
