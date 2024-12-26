@@ -4,15 +4,14 @@
 	>
 		<div class="container flex items-center justify-between mx-auto">
 			<NuxtLink href="/" class="grid grid-flow-col items-center gap-2">
-				<div class="w-7">
-					<img src="~/assets/images/icons/judge.webp" />
-				</div>
+        <NuxtImg width="28" height="28" src="/judge.png" densities="x1 x2" />
+        <span class="font-bold hover:text-gradient">MIASIN</span>
 			</NuxtLink>
 			<nav>
 				<ul class="flex gap-4">
-					<li><NuxtLink to="/cases/new">New Case</NuxtLink></li>
+					<li><NuxtLink to="/cases/new" class="hover:text-gradient">New Case</NuxtLink></li>
 					<!-- <li class="hidden md:block"><NuxtLink to="/cases">Cases</NuxtLink></li> -->
-					<li><NuxtLink to="/rules">Rules</NuxtLink></li>
+					<li><NuxtLink to="/rules" class="hover:text-gradient">Rules</NuxtLink></li>
 				</ul>
 			</nav>
 		</div>
