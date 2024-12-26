@@ -1,7 +1,7 @@
 <template>
 	<div class="grid place-content-center p-6 mx-auto">
 		<h1 class="mb-6 text-3xl text-center">Add new case</h1>
-		<form>
+		<form class="text-c-black">
 			<div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
 				<label>
 					<span class="text-white">Identity of the Offender/Criminal</span>
@@ -74,9 +74,9 @@
 					<label class="inline-flex items-center">
 						<input
 							type="checkbox"
-							class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-200 text-white focus:ring-1 focus:ring-offset-2 focus:ring-gray-500"
+							class="rounded bg-gray-200 border-transparent focus:border-transparent focus:bg-gray-900 text-white focus:ring-1 focus:ring-offset-2 focus:ring-gray-900"
 						/>
-						<span class="ml-2">I prefer to stay anonymous.</span>
+						<span class="ml-2 text-white">I prefer to stay anonymous.</span>
 					</label>
 				</div>
 			</div>
