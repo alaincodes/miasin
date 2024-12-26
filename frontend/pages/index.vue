@@ -1,8 +1,5 @@
 <template>
-	<div
-		class="grid grid-cols-1 gap-12 items-start p-4 md:py-12 md:grid-cols-2 md:h-[calc(100vh_-_var(--header-height))]"
-	>
-		<Judgement />
+	<div class="grid grid-cols-1 p-4 md:justify-self-center md:w-6/12 md:py-0">
 		<Cases />
 	</div>
 </template>
