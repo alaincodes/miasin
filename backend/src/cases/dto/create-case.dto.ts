@@ -3,7 +3,7 @@ export class CreateCaseDto {
   accused: string;
   date: string;
   time: string;
-  message: string;
+  question: string;
   user: string;
   judgement: string;
   guiltyCount: number;
