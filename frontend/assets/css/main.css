@@ -5,7 +5,7 @@
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-[#ffd859] via-[#ffd859] to-[#8ae99c];
+    @apply bg-gradient-to-b from-[#ffd859] via-[#ffd859] to-[#8ae99c];
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

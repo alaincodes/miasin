@@ -26,33 +26,6 @@ export default {
 				"c-green-3": "#51a256",
 				"c-green-soft": "#316334",
 			},
-			keyframes: {
-				hammerSwing: {
-					"0%": {
-						transform: "rotate(45deg)",
-						transformOrigin: "bottom center",
-					},
-					"30%": {
-						transform: "rotate(0deg)",
-						transformOrigin: "bottom center",
-					},
-					"60%": {
-						transform: "rotate(45deg)",
-						transformOrigin: "bottom center",
-					},
-					"80%": {
-						transform: "rotate(0deg)",
-						transformOrigin: "bottom center",
-					},
-					"100%": {
-						transform: "rotate(45deg)",
-						transformOrigin: "bottom center",
-					},
-				},
-			},
-			animation: {
-				hammerSwing: "hammerSwing 2s ease-in-out infinite",
-			},
 		},
 	},
 	plugins: [typography, forms],

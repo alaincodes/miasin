@@ -1,9 +1,7 @@
 <script setup>
 import { onMounted } from "vue";
 import Swiper from 'swiper';
-import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
-import 'swiper/css/free-mode';
 import { useFakeContentStore } from "../stores/useFakeContentStore.js";
 
 const fakeContentStore = useFakeContentStore();
@@ -11,19 +9,8 @@ const fakeContentStore = useFakeContentStore();
 onMounted(() => {
   if (window.matchMedia("(max-width: 768px)").matches) {
     new Swiper('.swiper', {
-      modules: [FreeMode],
       direction: 'vertical',
-      navigation: true,
       slidesPerView: 1,
-      breakpoints: {
-        768: {
-          freeMode: {
-            enabled: true,
-            sticky: false,
-          },
-          slidesPerView: 'auto',
-        }
-      },
     });
   }
 });
