@@ -1,6 +1,9 @@
 <script setup>
 defineProps({
-  question: String
+  question: {
+    type: String,
+    required: true,
+  }
 })
 </script>
 

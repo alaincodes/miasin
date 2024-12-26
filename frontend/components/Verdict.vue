@@ -1,10 +1,25 @@
 <script setup>
   defineProps({
-    onGuilty: Function,
-    onInnocent: Function,
-    accused: String,
-    guiltyCount: Number,
-    innocentCount: Number
+    onGuilty: {
+      type: Function,
+      required: true,
+    },
+    onInnocent: {
+      type: Function,
+      required: true,
+    },
+    accused: {
+      type: String,
+      required: true,
+    },
+    guiltyCount: {
+      type: Number,
+      required: true,
+    },
+    innocentCount: {
+      type: Number,
+      required: true,
+    }
   })
 </script>
 

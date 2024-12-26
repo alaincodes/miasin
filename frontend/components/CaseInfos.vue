@@ -1,10 +1,25 @@
 <script setup>
 defineProps({
-  topics: Array,
-  accuser: String,
-  accused: String,
-  date: String,
-  time: String
+  topics: {
+    type: Array,
+    required: true,
+  },
+  accuser: {
+    type: String,
+    required: true,
+  },
+  accused: {
+    type: String,
+    required: true,
+  },
+  date: {
+    type: String,
+    required: true,
+  },
+  time: {
+    type: String,
+    required: true,
+  }
 })
 </script>
 
