@@ -33,6 +33,8 @@ onMounted(() => {
 						:accused="item.accused"
 						:date="item.date"
 						:time="item.time"
+            :guiltyCount="item.guiltyCount"
+            :innocentCount="item.innocentCount"
 					/>
 
 					<Question :question="item.question" />
