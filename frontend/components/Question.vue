@@ -8,5 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <code class="p-3 rounded-md bg-c-black-light md:text-xl">{{ question }}</code>
+  <div class="prose p-3 rounded-md bg-c-black-light text-white md:text-lg">
+    <p>{{ question }}</p>
+  </div>
 </template>
