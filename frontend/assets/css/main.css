@@ -12,6 +12,10 @@
   }
 }
 
+:root {
+  --header-height: 3.75rem;
+}
+
 body {
 	@apply bg-c-black text-white;
 }
