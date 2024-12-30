@@ -30,7 +30,7 @@ export class AuthService {
     }
   }
 
-  signin() {
-    return { msg: 'i signUP' };
+  async signin() {
+    return 'i signUP';
   }
 }

@@ -1,4 +1,4 @@
-import { Controller, Post, Body } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { AuthDto } from './dto';
 
@@ -15,5 +15,10 @@ export class AuthController {
   @Post('signin')
   signin() {
     this.authService.signin();
+  }
+
+  @Get('signin')
+  findAll() {
+    return 'This action returns all cats';
   }
 }
