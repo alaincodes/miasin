@@ -7,18 +7,6 @@
     onInnocent: {
       type: Function,
       required: true,
-    },
-    accused: {
-      type: String,
-      required: true,
-    },
-    guiltyCount: {
-      type: Number,
-      required: true,
-    },
-    innocentCount: {
-      type: Number,
-      required: true,
     }
   })
 </script>
