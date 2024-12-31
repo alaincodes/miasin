@@ -19,10 +19,10 @@ const handleClickOutside = (event) => {
 
 onMounted(() => {
   document.addEventListener('click', handleClickOutside);
+});
 
-  onBeforeUnmount(() => {
-    document.removeEventListener('click', handleClickOutside);
-  });
+onBeforeUnmount(() => {
+  document.removeEventListener('click', handleClickOutside);
 });
 
 const stopPropagation = (event) => {
@@ -54,7 +54,7 @@ const stopPropagation = (event) => {
 		</div>
 	</header>
 
-  <div v-show="isMenuOpen" class="menu z-50 absolute top-[--header-height] right-0 bottom-0 left-0 w-dvw h-[calc(100dvh-var(--header-height))] grid place-content-center p-6 bg-c-black-lighter md:hidden">
+  <div :class="isMenuOpen ? 'bounce-in-right' : 'translate-y-full'" class="menu z-50 absolute top-[--header-height] right-0 bottom-0 left-0 w-dvw h-[calc(100dvh-var(--header-height))] grid place-content-center p-6 bg-c-black-lighter md:hidden">
     <nav>
       <ul class="flex flex-col gap-4">
         <li><NuxtLink to="/cases/new" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Submit</NuxtLink></li>
