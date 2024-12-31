@@ -2,6 +2,12 @@
 export default defineNuxtConfig({
 	compatibilityDate: "2024-12-20",
 
+  runtimeConfig: {
+    public: {
+      API_URL: process.env.API_URL || 'http://localhost:3333',
+    },
+  },
+
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
     head: {
