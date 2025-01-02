@@ -47,7 +47,7 @@ const stopPropagation = (event) => {
       </button>
 			<nav class="hidden md:block">
 				<ul class="flex gap-4">
-					<li><NuxtLink to="/cases/new" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Submit</NuxtLink></li>
+					<li><NuxtLink to="/cases/create" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Submit</NuxtLink></li>
 					<li><NuxtLink to="/rules" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Rules</NuxtLink></li>
 				</ul>
 			</nav>
@@ -57,7 +57,7 @@ const stopPropagation = (event) => {
   <div :class="isMenuOpen ? 'bounce-in-right' : 'translate-y-full'" class="menu z-50 absolute top-[--header-height] right-0 bottom-0 left-0 w-dvw h-[calc(100dvh-var(--header-height))] grid place-content-center p-6 bg-c-black-lighter md:hidden">
     <nav>
       <ul class="flex flex-col gap-4">
-        <li><NuxtLink to="/cases/new" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Submit</NuxtLink></li>
+        <li><NuxtLink to="/cases/create" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Submit</NuxtLink></li>
         <li><NuxtLink to="/rules" class="duration-300 hover:text-c-yellow-1" @click="stopPropagation">Rules</NuxtLink></li>
       </ul>
     </nav>
