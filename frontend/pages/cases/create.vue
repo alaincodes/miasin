@@ -31,16 +31,16 @@ async function handleFormSubmit() {
 <template>
   <div class="grid place-content-center p-6 mx-auto">
     <h1 class="mb-6 text-3xl text-center">Add new case</h1>
-    <form @submit.prevent="handleFormSubmit" class="text-c-black">
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+    <form @submit.prevent="handleFormSubmit" class="w-96 max-w-full text-c-black">
+      <div class="grid grid-cols-1 gap-6">
         <label for="content" class="col-span-full">
-          <span class="text-white">Content</span>
-          <input
+          <span class="text-white">Crime description</span>
+          <textarea
             id="content"
             v-model="content"
-            type="text"
+            rows="5"
             class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-            placeholder="Crime type..."
+            placeholder="I am a victim..."
 
           />
         </label>
