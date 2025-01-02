@@ -31,7 +31,7 @@ async function handleFormSubmit() {
 <template>
   <div class="grid place-content-center p-6 mx-auto">
     <h1 class="mb-6 text-3xl text-center">Add new case</h1>
-    <form @submit.prevent="handleFormSubmit" class="w-96 max-w-full text-c-black">
+    <form @submit.prevent="handleFormSubmit" class="text-c-black">
       <div class="grid grid-cols-1 gap-6">
         <label for="content" class="col-span-full">
           <span class="text-white">Crime description</span>
