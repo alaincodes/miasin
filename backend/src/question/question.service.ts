@@ -18,21 +18,38 @@ export class QuestionService {
       return question;
     } catch (error) {
       console.log('----- CHECK ERROR (CREATE) -----', error);
+      throw error;
     }
   }
 
   async findAll() {
     try {
-      const questions = await this.prisma.question.findMany();
+      const questions = await this.prisma.question.findMany({
+        orderBy: {
+          id: 'desc',
+        },
+      });
 
       return questions;
     } catch (error) {
       console.log('----- CHECK ERROR (FINDALL) -----', error);
+      throw error;
     }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} question`;
+  async findOne(id: number) {
+    try {
+      const question = await this.prisma.question.findUnique({
+        where: {
+          id: id,
+        },
+      });
+
+      return question;
+    } catch (error) {
+      console.log('----- CHECK ERROR (FINDALL) -----', error);
+      throw error;
+    }
   }
 
   update(id: number, updateQuestionDto: UpdateQuestionDto) {
