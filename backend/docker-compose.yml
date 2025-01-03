@@ -11,6 +11,10 @@ services:
       - postgres:/var/lib/postgresql/data
     networks:
       - miasin
+  app:
+    build: .
+    env_file:
+      - .env
 networks:
   miasin:
 volumes:
