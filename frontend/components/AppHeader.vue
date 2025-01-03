@@ -9,7 +9,7 @@
 			</NuxtLink>
 			<nav>
 				<ul class="flex gap-4">
-					<li><NuxtLink to="/cases/create" class="duration-300 hover:text-c-yellow-1">Submit</NuxtLink></li>
+					<li><NuxtLink to="/questions/create" class="duration-300 hover:text-c-yellow-1">Submit</NuxtLink></li>
 					<li><NuxtLink to="/rules" class="duration-300 hover:text-c-yellow-1">Rules</NuxtLink></li>
 				</ul>
 			</nav>
