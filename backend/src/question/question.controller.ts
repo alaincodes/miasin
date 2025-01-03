@@ -16,8 +16,15 @@ export class QuestionController {
   constructor(private readonly questionService: QuestionService) {}
 
   @Post()
-  create(@Body() createQuestionDto: CreateQuestionDto) {
-    return this.questionService.create(createQuestionDto);
+  async create(@Body() createQuestionDto: CreateQuestionDto) {
+    try {
+      const question = await this.questionService.create(createQuestionDto);
+
+      return question;
+    } catch (error) {
+      console.log('----- CHECK ERROR (CONTROLLER) -----', error);
+      throw error;
+    }
   }
 
   @Get()
