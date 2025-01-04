@@ -10,9 +10,9 @@ async function bootstrap() {
     }),
   );
   app.enableCors({
-    origin: 'http://localhost:3000', // Autorise seulement ce domaine
-    methods: 'GET,POST,PUT,DELETE', // Méthodes HTTP autorisées
-    credentials: true, // Autorise les cookies/identifiants si nécessaire
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    methods: 'GET,POST,PUT,DELETE',
+    credentials: true,
   });
   await app.listen(process.env.PORT ?? 3333);
 }
