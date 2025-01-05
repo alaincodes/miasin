@@ -17,7 +17,7 @@ const { data, pending, error } = await useFetch(
 		v-else
 		v-for="question in data"
 		:key="question.id"
-		class="grid gap-5 even:bg-slate-500/20 md:divide-y md:divide-c-yellow-1"
+		class="grid gap-5 even:bg-slate-500/20"
 	>
 		<div class="grid gap-4 h-full content-center p-4 md:px-6 md:py-9">
 			<p class="italic">
