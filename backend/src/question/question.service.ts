@@ -12,6 +12,7 @@ export class QuestionService {
       const question = await this.prisma.question.create({
         data: {
           content: createQuestionDto.content,
+          accused: createQuestionDto.accused,
         },
       });
 

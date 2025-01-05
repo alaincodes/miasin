@@ -3,6 +3,7 @@ import { ref } from "vue";
 const config = useRuntimeConfig();
 
 const content = ref("");
+const accused = ref("");
 const isLoading = ref(false);
 const successMessage = ref("");
 const errorMessage = ref("");
@@ -15,13 +16,17 @@ async function handleFormSubmit() {
 	try {
 		const res = await $fetch(`${config.public.API_URL}/api/question`, {
 			method: "POST",
-			body: { content: content.value },
+			body: {
+				content: content.value,
+				accused: accused.value ?? "Accused",
+			},
 		});
 
 		successMessage.value = "QUESTION ADDED";
 		content.value = "";
 		navigateTo("/");
 	} catch (error) {
+		console.log(error);
 		errorMessage.value = "MISSING SOMETHING......";
 	} finally {
 		isLoading.value = false;
@@ -30,18 +35,27 @@ async function handleFormSubmit() {
 </script>
 
 <template>
-	<div class="grid place-content-center p-6 mx-auto">
-		<h1 class="mb-6 text-3xl text-center">Add new case</h1>
-		<form @submit.prevent="handleFormSubmit" class="text-c-black">
-			<div class="grid grid-cols-1 gap-6">
-				<label for="content" class="col-span-full">
+	<div class="grid content-center w-6/12 p-6 mx-auto">
+		<h1 class="mb-6 text-3xl text-center">Question of law</h1>
+		<form @submit.prevent="handleFormSubmit" class="w-full text-c-black">
+			<div class="flex flex-col gap-6">
+				<label for="accused">
+					<span class="text-white">Accused name</span>
+					<input
+						id="accused"
+						v-model="accused"
+						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
+						placeholder="Alanus Tranus"
+					/>
+				</label>
+				<label for="content">
 					<span class="text-white">Crime description</span>
 					<textarea
 						id="content"
 						v-model="content"
 						rows="5"
 						class="mt-1 block w-full rounded-md bg-gray-100 border-transparent focus:border-gray-500 focus:bg-white focus:ring-0"
-						placeholder="I am a victim..."
+						placeholder="Detailed description of the crime..."
 					/>
 				</label>
 
