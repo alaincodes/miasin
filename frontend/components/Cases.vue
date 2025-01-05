@@ -33,17 +33,17 @@ onMounted(() => {
 						:accused="item.accused"
 						:date="item.date"
 						:time="item.time"
-            :guiltyCount="item.guiltyCount"
-            :innocentCount="item.innocentCount"
+						:guiltyCount="item.guiltyCount"
+						:innocentCount="item.innocentCount"
 					/>
 
 					<Question :question="item.question" />
 
-					<VerdictApexChart
+					<!-- <VerdictApexChart
 						:id="item.id"
 						:guiltyCount="item.guiltyCount"
 						:innocentCount="item.innocentCount"
-					/>
+					/> -->
 
 					<Verdict
 						:onGuilty="() => fakeContentStore.incrementGuilty(item.id)"
