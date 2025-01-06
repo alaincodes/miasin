@@ -18,15 +18,15 @@ async function handleFormSubmit() {
 			method: "POST",
 			body: {
 				content: content.value,
-				accused: accused.value ?? "Accused",
+				accused: accused.value,
 			},
 		});
 
 		successMessage.value = "QUESTION ADDED";
+		accused.value = "";
 		content.value = "";
 		navigateTo("/");
 	} catch (error) {
-		console.log(error);
 		errorMessage.value = "MISSING SOMETHING......";
 	} finally {
 		isLoading.value = false;
