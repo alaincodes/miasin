@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="flex gap-2 items-center py-1 px-3 bg-c-black-darker border border-c-black-lighter rounded-lg duration-300 hover:border-white"
+		class="flex gap-2 items-center py-1 px-3 bg-c-black-darker border border-c-white rounded-lg duration-300 hover:border-c-yellow-1"
 		aria-label="share"
 	>
 		<svg

@@ -1,6 +1,6 @@
 <template>
 	<button
-		class="grid grid-flow-col place-items-center gap-2 py-1 px-3 border border-transparent rounded-lg duration-300 bg-c-yellow-1 text-c-black hover:bg-yellow-900 hover:border-yellow-900 hover:text-white"
+		class="grid grid-flow-col place-items-center gap-2 py-1 px-3 border border-c-yellow-1 rounded-lg duration-300 bg-c-yellow-1 text-c-black hover:bg-yellow-700 hover:text-white"
 		aria-label="Declare guilty"
 	>
 		<svg

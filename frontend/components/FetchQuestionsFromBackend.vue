@@ -21,8 +21,8 @@ const { data, pending, error } = await useFetch(
 	>
 		<div class="grid gap-4 h-full content-center p-4 md:px-6 md:py-9">
 			<p class="italic">
-				<strong>Anonymous</strong> filed a complaint against
-				<strong>{{ question.accused }}</strong>
+				<strong class="underline underline-offset-4">Anonymous</strong> filed a complaint against
+				<strong class="underline underline-offset-4">{{ question.accused }}</strong>
 				{{ dayjs().to(dayjs(question.createdAt)) }}
 			</p>
 
