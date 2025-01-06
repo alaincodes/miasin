@@ -9,6 +9,7 @@ import { QuestionModule } from './question/question.module';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
+      envFilePath: '.env',
     }),
     AuthModule,
     UserModule,
