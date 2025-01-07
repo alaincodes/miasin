@@ -4,9 +4,9 @@ services:
     ports:
       - 5434:5432
     environment:
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
-      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
     volumes:
       - postgres:/var/lib/postgresql/data
     networks:
@@ -22,7 +22,7 @@ networks:
 volumes:
   postgres:
 healthcheck:
-  test: ["CMD-SHELL", "pg_isready -U postgres"]
+  test: ['CMD-SHELL', 'pg_isready -U postgres']
   interval: 10s
   timeout: 5s
   retries: 3
