@@ -12,7 +12,7 @@ const { data, pending, error } = await useFetch(
 
 <template>
 	<div v-if="pending">Chargement...</div>
-	<div v-else-if="error">Une erreur est survenue : {{ error.message }}</div>
+	<div v-else-if="error">Une erreur est survenue</div>
 	<div
 		v-else
 		v-for="question in data"
