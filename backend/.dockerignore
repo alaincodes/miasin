@@ -1,0 +1,23 @@
+# Ignore les modules Node.js
+node_modules
+
+# Ignore le dossier dist (généré après la compilation)
+dist
+
+# Ignore les fichiers de configuration spécifiques à l'IDE
+.vscode
+.idea
+
+# Ignore les fichiers générés par les outils de développement
+*.log
+npm-debug.log
+
+# Ignore les fichiers locaux de test
+tests
+test
+
+# Ignore le répertoire .git
+.git
+
+# Ignore les fichiers de configuration personnels
+*.env
