@@ -19,3 +19,5 @@ test
 # Ignore le répertoire .git
 .git
 
+# Ignore les fichiers de configuration personnels
+*.env
