@@ -7,6 +7,9 @@ WORKDIR /app
 # Étape 3 : Copier le fichier package.json et package-lock.json pour installer les dépendances
 COPY package*.json ./
 
+# Appliquer les migrations Prisma
+RUN npx prisma migrate deploy
+
 # Étape 4 : Installer les dépendances
 RUN npm install
 
