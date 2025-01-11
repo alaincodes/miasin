@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Étape 7 : Exposer le port sur lequel l'application écoute
-EXPOSE 3000
+EXPOSE 10000
 
 # Étape 8 : Lancer l'application en mode production
 CMD ["npm", "run", "start:prod"]
