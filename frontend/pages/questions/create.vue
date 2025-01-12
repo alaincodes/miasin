@@ -35,7 +35,7 @@ async function handleFormSubmit() {
 </script>
 
 <template>
-	<div class="grid content-center w-6/12 p-6 mx-auto">
+	<div class="grid content-center w-full p-6 mx-auto">
 		<h1 class="mb-6 text-3xl text-center">Question of law</h1>
 		<form @submit.prevent="handleFormSubmit" class="w-full text-c-black">
 			<div class="flex flex-col gap-6">
