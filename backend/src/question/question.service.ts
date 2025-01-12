@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, BadRequestException } from '@nestjs/common';
 import { CreateQuestionDto } from './dto/create-question.dto';
 import { UpdateQuestionDto } from './dto/update-question.dto';
 import { PrismaService } from '../prisma/prisma.service';
@@ -53,8 +53,32 @@ export class QuestionService {
     }
   }
 
-  update(id: number, updateQuestionDto: UpdateQuestionDto) {
-    return `This action updates a #${id} question`;
+  async update(id: number, updateQuestionDto: UpdateQuestionDto) {
+    const { guiltyCount, innocentCount } = updateQuestionDto;
+
+    if (guiltyCount !== undefined) {
+      return this.prisma.question.update({
+        where: { id },
+        data: {
+          guiltyCount: {
+            increment: guiltyCount,
+          },
+        },
+      });
+    }
+
+    if (innocentCount !== undefined) {
+      return this.prisma.question.update({
+        where: { id },
+        data: {
+          innocentCount: {
+            increment: innocentCount,
+          },
+        },
+      });
+    }
+
+    throw new BadRequestException('No valid fields to update');
   }
 
   remove(id: number) {

@@ -11,7 +11,7 @@ async function bootstrap() {
   );
   app.enableCors({
     origin: process.env.FRONTEND_URL || 'http://localhost:3000',
-    methods: 'GET,POST,PUT,DELETE',
+    methods: 'GET,POST,PUT,DELETE,PATCH',
     credentials: true,
   });
   await app.listen(process.env.PORT ?? 3333);
