@@ -10,7 +10,19 @@ const { data, pending, error } = await useFetch(
 );
 
 const handleGuiltyVote = async (id) => {
+	const currentVote = localStorage.getItem(`voted_guilty_${id}`);
+
 	try {
+		let increment = 0;
+
+		if (currentVote === "true") {
+			increment = -1;
+			localStorage.removeItem(`voted_guilty_${id}`);
+		} else {
+			increment = 1;
+			localStorage.setItem(`voted_guilty_${id}`, "true");
+		}
+
 		const response = await fetch(
 			`${config.public.API_URL}/api/question/${id}`,
 			{
@@ -18,7 +30,9 @@ const handleGuiltyVote = async (id) => {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ guiltyCount: 1 }),
+				body: JSON.stringify({
+					guiltyCount: increment,
+				}),
 			}
 		);
 
@@ -28,7 +42,7 @@ const handleGuiltyVote = async (id) => {
 
 		const updatedQuestion = data.value.find((question) => question.id === id);
 		if (updatedQuestion) {
-			updatedQuestion.guiltyCount += 1;
+			updatedQuestion.guiltyCount += increment;
 		}
 	} catch (error) {
 		console.error("Error updating guilty count:", error.message);
@@ -36,7 +50,19 @@ const handleGuiltyVote = async (id) => {
 };
 
 const handleInnocentVote = async (id) => {
+	const currentVote = localStorage.getItem(`voted_innocent_${id}`);
+
 	try {
+		let increment = 0;
+
+		if (currentVote === "true") {
+			increment = -1;
+			localStorage.removeItem(`voted_innocent_${id}`);
+		} else {
+			increment = 1;
+			localStorage.setItem(`voted_innocent_${id}`, "true");
+		}
+
 		const response = await fetch(
 			`${config.public.API_URL}/api/question/${id}`,
 			{
@@ -44,7 +70,9 @@ const handleInnocentVote = async (id) => {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify({ innocentCount: 1 }),
+				body: JSON.stringify({
+					innocentCount: increment,
+				}),
 			}
 		);
 
@@ -54,7 +82,7 @@ const handleInnocentVote = async (id) => {
 
 		const updatedQuestion = data.value.find((question) => question.id === id);
 		if (updatedQuestion) {
-			updatedQuestion.innocentCount += 1;
+			updatedQuestion.innocentCount += increment;
 		}
 	} catch (error) {
 		console.error("Error updating innocent count:", error.message);
