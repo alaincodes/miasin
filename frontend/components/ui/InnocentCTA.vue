@@ -1,5 +1,19 @@
+<script setup>
+defineProps({
+	handleInnocentVote: {
+		type: Function,
+		required: true,
+	},
+	id: {
+		type: Number,
+		required: true,
+	},
+});
+</script>
+
 <template>
 	<button
+		@click="() => handleInnocentVote(id)"
 		class="grid grid-flow-col place-items-center gap-2 py-1 px-3 border border-c-green-3 rounded-lg duration-300 bg-c-green-3 text-c-black hover:bg-green-700 hover:text-white"
 		aria-label="Vote innocent"
 	>

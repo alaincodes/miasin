@@ -1,7 +1,19 @@
-<script setup></script>
+<script setup>
+defineProps({
+	handleGuiltyVote: {
+		type: Function,
+		required: true,
+	},
+	id: {
+		type: Number,
+		required: true,
+	},
+});
+</script>
 
 <template>
 	<button
+		@click="() => handleGuiltyVote(id)"
 		class="grid grid-flow-col place-items-center gap-2 py-1 px-3 border border-c-yellow-1 rounded-lg duration-300 bg-c-yellow-1 text-c-black hover:bg-yellow-700 hover:text-white"
 		aria-label="Declare guilty"
 	>
