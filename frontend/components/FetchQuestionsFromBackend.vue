@@ -1,4 +1,6 @@
 <script setup>
+import { ref } from "vue";
+import { useDebounce } from "@vueuse/core";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
@@ -9,95 +11,22 @@ const { data, pending, error } = await useFetch(
 	`${config.public.API_URL}/api/question`
 );
 
-const handleGuiltyVote = async (id) => {
-	const currentGuiltyVote = localStorage.getItem(`voted_guilty_${id}`);
-	const currentInnocentVote = localStorage.getItem(`voted_innocent_${id}`);
+const loading = ref(false);
 
-	try {
-		let increment = 0;
+const getVoteFromLocalStorage = (id, voteType) => {
+	return localStorage.getItem(`voted_${voteType}_${id}`) === "true";
+};
 
-		// Si l'utilisateur avait déjà voté "Guilty", on décrémente "Guilty"
-		if (currentGuiltyVote === "true") {
-			increment = -1; // Décrémenter si déjà voté
-			localStorage.removeItem(`voted_guilty_${id}`);
-		} else {
-			increment = 1; // Incrémenter si premier vote
-			localStorage.setItem(`voted_guilty_${id}`, "true");
-		}
-
-		// Si l'utilisateur avait voté "Innocent", on décrémente "Innocent"
-		if (currentInnocentVote === "true") {
-			await fetch(`${config.public.API_URL}/api/question/${id}`, {
-				method: "PATCH",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					innocentCount: -1,
-				}),
-			});
-			localStorage.removeItem(`voted_innocent_${id}`);
-		}
-
-		// Mise à jour de "GuiltyCount"
-		const response = await fetch(
-			`${config.public.API_URL}/api/question/${id}`,
-			{
-				method: "PATCH",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					guiltyCount: increment,
-				}),
-			}
-		);
-
-		if (!response.ok) {
-			throw new Error("Failed to update guilty count");
-		}
-
-		// Mise à jour locale du count
-		const updatedQuestion = data.value.find((question) => question.id === id);
-		if (updatedQuestion) {
-			updatedQuestion.guiltyCount += increment;
-		}
-	} catch (error) {
-		console.error("Error updating guilty count:", error.message);
+const updateVoteInLocalStorage = (id, voteType, value) => {
+	if (value) {
+		localStorage.setItem(`voted_${voteType}_${id}`, "true");
+	} else {
+		localStorage.removeItem(`voted_${voteType}_${id}`);
 	}
 };
 
-const handleInnocentVote = async (id) => {
-	const currentInnocentVote = localStorage.getItem(`voted_innocent_${id}`);
-	const currentGuiltyVote = localStorage.getItem(`voted_guilty_${id}`);
-
+const updateVoteCount = async (id, voteType, increment) => {
 	try {
-		let increment = 0;
-
-		// Si l'utilisateur avait déjà voté "Innocent", on décrémente "Innocent"
-		if (currentInnocentVote === "true") {
-			increment = -1; // Décrémenter si déjà voté
-			localStorage.removeItem(`voted_innocent_${id}`);
-		} else {
-			increment = 1; // Incrémenter si premier vote
-			localStorage.setItem(`voted_innocent_${id}`, "true");
-		}
-
-		// Si l'utilisateur avait voté "Guilty", on décrémente "Guilty"
-		if (currentGuiltyVote === "true") {
-			await fetch(`${config.public.API_URL}/api/question/${id}`, {
-				method: "PATCH",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					guiltyCount: -1,
-				}),
-			});
-			localStorage.removeItem(`voted_guilty_${id}`);
-		}
-
-		// Mise à jour de "InnocentCount"
 		const response = await fetch(
 			`${config.public.API_URL}/api/question/${id}`,
 			{
@@ -106,22 +35,48 @@ const handleInnocentVote = async (id) => {
 					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
-					innocentCount: increment,
+					[`${voteType}Count`]: increment,
 				}),
 			}
 		);
 
 		if (!response.ok) {
-			throw new Error("Failed to update innocent count");
+			throw new Error(`Failed to update ${voteType} count`);
 		}
 
-		// Mise à jour locale du count
 		const updatedQuestion = data.value.find((question) => question.id === id);
 		if (updatedQuestion) {
-			updatedQuestion.innocentCount += increment;
+			updatedQuestion[`${voteType}Count`] += increment;
 		}
 	} catch (error) {
-		console.error("Error updating innocent count:", error.message);
+		console.error(`Error updating ${voteType} count:`, error.message);
+	}
+};
+
+const handleVote = async (id, voteType) => {
+	if (loading.value) return;
+
+	const opposingVoteType = voteType === "guilty" ? "innocent" : "guilty";
+	const currentVote = getVoteFromLocalStorage(id, voteType);
+	const opposingVote = getVoteFromLocalStorage(id, opposingVoteType);
+
+	let increment = currentVote ? -1 : 1;
+
+	loading.value = true;
+
+	try {
+		if (opposingVote) {
+			await updateVoteCount(id, opposingVoteType, -1);
+			updateVoteInLocalStorage(id, opposingVoteType, false);
+		}
+
+		await updateVoteCount(id, voteType, increment);
+		updateVoteInLocalStorage(id, voteType, !currentVote);
+	} catch (error) {
+		console.error("Error updating vote:", error.message);
+	} finally {
+		await useDebounce(loading, 2000);
+		loading.value = false;
 	}
 };
 </script>
@@ -159,12 +114,12 @@ const handleInnocentVote = async (id) => {
 				<div class="flex w-full">
 					<UiGuiltyCTA
 						:id="question.id"
-						:handleGuiltyVote="handleGuiltyVote"
+						:handleGuiltyVote="() => handleVote(question.id, 'guilty')"
 						class="rounded-r-none"
 					/>
 					<UiInnocentCTA
 						:id="question.id"
-						:handleInnocentVote="handleInnocentVote"
+						:handleInnocentVote="() => handleVote(question.id, 'innocent')"
 						class="rounded-l-none"
 					/>
 					<UiCommentCTA class="ml-auto" />
