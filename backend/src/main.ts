@@ -9,8 +9,6 @@ async function bootstrap() {
 
   app.use(helmet());
 
-  app.useGlobalGuards(app.get(ThrottlerGuard));
-
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
